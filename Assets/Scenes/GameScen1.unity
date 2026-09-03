@@ -1413,6 +1413,7 @@ GameObject:
   - component: {fileID: 411049774}
   - component: {fileID: 411049775}
   - component: {fileID: 411049776}
+  - component: {fileID: 411049777}
   m_Layer: 0
   m_Name: PlayerUnit
   m_TagString: Untagged
@@ -1546,6 +1547,19 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &411049777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411049771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f084582049a1af44f9cbb7b87bf5dbf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PlayerShooter
+  playerInput: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -11428,8 +11442,8 @@ MonoBehaviour:
   <Damage>k__BackingField: 10
   <Distance>k__BackingField: 15
   <DeviationAngle>k__BackingField: 5
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 1704145761878202281, guid: 3591246e95d91014fb443803cea29e18, type: 3}
+  firePoint: {fileID: 2067373656}
 --- !u!1 &1273339329
 GameObject:
   m_ObjectHideFlags: 0
