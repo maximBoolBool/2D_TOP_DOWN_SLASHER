@@ -2,11 +2,13 @@
 
 namespace Assets.Scripts
 {
-    [RequireComponent(typeof(Rigidbody2D))]
+    using UnityEngine;
+
+    [RequireComponent(typeof(Rigidbody2D))] // Гарантирует наличие Rigidbody2D
     public class Bullet : MonoBehaviour
     {
         [SerializeField] private float speed = 20f;
-        [SerializeField] private Rigidbody2D rb;
+        private Rigidbody2D _rb;
 
         private float _damage;
         private float _maxDistance;
@@ -14,7 +16,7 @@ namespace Assets.Scripts
 
         private void Awake()
         {
-            if (rb == null) rb = GetComponent<Rigidbody2D>();
+            _rb = GetComponent<Rigidbody2D>();
         }
 
         public void Initialize(float damage, float maxDistance, Vector2 direction)
@@ -23,17 +25,15 @@ namespace Assets.Scripts
             _maxDistance = maxDistance;
             _spawnPosition = transform.position;
 
-            // Поворачиваем спрайт пули в сторону полёта
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-            // Задаем физическую скорость
-            rb.linearVelocity = direction * speed;
+            if (_rb != null)
+            {
+                // В Unity 6 — linearVelocity, в старых версиях — velocity
+                _rb.linearVelocity = direction * speed;
+            }
         }
 
         private void Update()
         {
-            // Удаляем пулю, если она пролетела дальше заданной дистанции
             if (Vector3.Distance(_spawnPosition, transform.position) >= _maxDistance)
             {
                 Destroy(gameObject);
@@ -42,8 +42,8 @@ namespace Assets.Scripts
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            // Проверка на попадание во врага/препятствие
-            // if (collision.TryGetComponent<IDamageable>(out var target)) target.TakeDamage(_damage);
+            // Не уничтожаем пулю при столкновении с самим игроком
+            if (collision.CompareTag("Player")) return;
 
             Destroy(gameObject);
         }

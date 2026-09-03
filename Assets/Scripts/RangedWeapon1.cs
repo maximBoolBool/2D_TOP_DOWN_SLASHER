@@ -17,26 +17,29 @@ namespace Assets.Scripts
 
         public void Execute()
         {
-            if (bulletPrefab == null || firePoint == null)
+            // Обязательная проверка! Без этого Instantiate вызовет ошибку
+            if (bulletPrefab == null)
             {
-                Debug.LogWarning("Не назначен bulletPrefab или firePoint!");
+                Debug.LogError("Ошибка: Не назначен bulletPrefab в инспекторе на объекте " + gameObject.name);
                 return;
             }
 
-            // 1. Получаем базовое направление выстрела (куда смотрит firePoint)
-            Vector2 fireDirection = firePoint.right;
+            if (firePoint == null)
+            {
+                Debug.LogError("Ошибка: Не назначен firePoint в инспекторе на объекте " + gameObject.name);
+                return;
+            }
 
-            // 2. Добавляем разброс (DeviationAngle)
+            // Спавн пули
+            Bullet bulletInstance = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+            Vector2 fireDirection = firePoint.right;
             if (DeviationAngle > 0)
             {
-                float randomOffset = UnityEngine.Random.Range(-DeviationAngle / 2f, DeviationAngle / 2f);
+                float randomOffset = Random.Range(-DeviationAngle / 2f, DeviationAngle / 2f);
                 fireDirection = Quaternion.Euler(0f, 0f, randomOffset) * fireDirection;
             }
 
-            // 3. Инстанцируем пулю в точке firePoint
-            Bullet bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-
-            // 4. Передаем параметры из IWeapon в пулю
             bulletInstance.Initialize(Damage, Distance, fireDirection);
         }
     }

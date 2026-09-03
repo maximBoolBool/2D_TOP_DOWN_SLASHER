@@ -11330,6 +11330,7 @@ GameObject:
   - component: {fileID: 1125472266}
   - component: {fileID: 1125472267}
   - component: {fileID: 1125472268}
+  - component: {fileID: 1125472269}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -11444,6 +11445,19 @@ MonoBehaviour:
   <DeviationAngle>k__BackingField: 5
   bulletPrefab: {fileID: 1704145761878202281, guid: 3591246e95d91014fb443803cea29e18, type: 3}
   firePoint: {fileID: 2067373656}
+--- !u!114 &1125472269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125472264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f084582049a1af44f9cbb7b87bf5dbf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PlayerShooter
+  playerInput: {fileID: 0}
 --- !u!1 &1273339329
 GameObject:
   m_ObjectHideFlags: 0
