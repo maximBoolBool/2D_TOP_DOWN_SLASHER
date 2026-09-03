@@ -6,18 +6,17 @@ namespace Assets.Scripts
     public class RangedWeapon1 : MonoBehaviour, IWeapon
     {
         [Header("Weapon Interface Properties")]
-        [field: SerializeField] public bool IsAutomatic { get; set; } = false;
+        [field: SerializeField] public bool IsAutomatic { get; set; } = true;
         [field: SerializeField] public float Damage { get; set; } = 10f;
         [field: SerializeField] public float Distance { get; set; } = 15f;
-        [field: SerializeField] public int DeviationAngle { get; set; } = 5; // Разброс в градусах
+        [field: SerializeField] public int DeviationAngle { get; set; } = 5;
 
         [Header("Spawn Settings")]
         [SerializeField] private Bullet bulletPrefab;
-        [SerializeField] private Transform firePoint; // Пустой GameObject на кончике дула
+        [SerializeField] private Transform firePoint;
 
         public void Execute()
         {
-            // Обязательная проверка! Без этого Instantiate вызовет ошибку
             if (bulletPrefab == null)
             {
                 Debug.LogError("Ошибка: Не назначен bulletPrefab в инспекторе на объекте " + gameObject.name);
@@ -30,7 +29,6 @@ namespace Assets.Scripts
                 return;
             }
 
-            // Спавн пули
             Bullet bulletInstance = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
             Vector2 fireDirection = firePoint.right;
