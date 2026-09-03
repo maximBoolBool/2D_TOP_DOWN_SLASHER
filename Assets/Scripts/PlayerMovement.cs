@@ -1,64 +1,49 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1f;
+    [Header("Settings")]
+    [SerializeField] private float moveSpeed = 5f;
 
-    private PlayerControls controls;
-    private Vector2 currentInput;
-    private Coroutine moveCoroutine;
+    [Header("References")]
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private PlayerInput playerInput;
+
+    private Vector2 _moveInput;
 
     private void Awake()
     {
-        controls = new PlayerControls();
-        controls.Player.Move.performed += OnMovePerformed;
-        controls.Player.Move.canceled += OnMoveCanceled;
+        if (rb == null) rb = GetComponent<Rigidbody2D>();
+        if (playerInput == null) playerInput = GetComponent<PlayerInput>();
     }
 
-    private void OnEnable() => controls.Enable();
+    private void OnEnable()
+    {
+        if (playerInput != null)
+        {
+            playerInput.actions["Move"].performed += OnMove;
+            playerInput.actions["Move"].canceled += OnMove;
+        }
+    }
 
     private void OnDisable()
     {
-        controls.Disable();
-        StopMoveLoop();
-    }
-
-    private void OnMovePerformed(InputAction.CallbackContext context)
-    {
-        currentInput = context.ReadValue<Vector2>();
-
-        if (moveCoroutine == null)
+        if (playerInput != null)
         {
-            moveCoroutine = StartCoroutine(MoveLoop());
+            playerInput.actions["Move"].performed -= OnMove;
+            playerInput.actions["Move"].canceled -= OnMove;
         }
     }
 
-    private void OnMoveCanceled(InputAction.CallbackContext context)
+    private void OnMove(InputAction.CallbackContext context)
     {
-        currentInput = Vector2.zero;
-        StopMoveLoop();
+        _moveInput = context.ReadValue<Vector2>();
     }
 
-    private IEnumerator MoveLoop()
+    private void FixedUpdate()
     {
-        while (currentInput != Vector2.zero)
-        {
-            Vector3 moveDirection = new Vector3(currentInput.x, currentInput.y, 0f);
-            transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
-            yield return null;
-        }
-
-        moveCoroutine = null;
-    }
-
-    private void StopMoveLoop()
-    {
-        if (moveCoroutine != null)
-        {
-            StopCoroutine(moveCoroutine);
-            moveCoroutine = null;
-        }
+        rb.linearVelocity = _moveInput * moveSpeed;
     }
 }
