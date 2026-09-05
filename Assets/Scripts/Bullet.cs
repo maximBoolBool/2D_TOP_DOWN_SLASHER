@@ -40,11 +40,9 @@ namespace Assets.Scripts
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            // Не уничтожаем пулю при столкновении с самим игроком
-            if (collision.CompareTag("Player")) return;
-
+            if (collision.gameObject.CompareTag("Player")) return;
             Destroy(gameObject);
         }
     }
