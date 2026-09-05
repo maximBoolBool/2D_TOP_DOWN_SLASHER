@@ -10,7 +10,6 @@ namespace Assets.Scripts
 
         private IWeapon _currentWeapon;
         private bool _isFirePressed;
-        private float _nextFireTime;
 
         private void Awake()
         {
