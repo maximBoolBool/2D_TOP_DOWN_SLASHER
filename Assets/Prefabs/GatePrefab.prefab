@@ -77,9 +77,9 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_CompositeOperation: 1
+  m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.38864267}
   m_SpriteTilingProperty:
@@ -172,7 +172,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1100
+  m_SortingOrder: 500
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6554602625420338117, guid: c582432e5e8351b4db1abc0f029c384e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

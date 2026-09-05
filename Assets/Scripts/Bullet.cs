@@ -7,7 +7,7 @@ namespace Assets.Scripts
     [RequireComponent(typeof(Rigidbody2D))] // Гарантирует наличие Rigidbody2D
     public class Bullet : MonoBehaviour
     {
-        [SerializeField] private float speed = 5f;
+        [SerializeField] private float speed = 10f;
         private Rigidbody2D _rb;
 
         private float _damage;
