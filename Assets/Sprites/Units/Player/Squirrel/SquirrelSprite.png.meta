@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 6be8f668603e50b4197f033ddd245f1d
+guid: 1f83616e44399aa4a943459b1aa8508b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3519842585265558312
-    second: EnemySprite1_0
+      213: -1154920720866299363
+    second: SquirrelSprite_0
   - first:
-      213: 5286771841623837438
-    second: EnemySprite1_1
+      213: -1586814576242671989
+    second: SquirrelSprite_1
   - first:
-      213: 2216075771221308745
-    second: EnemySprite1_2
+      213: -7196093517388896044
+    second: SquirrelSprite_2
   - first:
-      213: 6360199109583239431
-    second: EnemySprite1_3
+      213: 5948286333340754681
+    second: SquirrelSprite_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,89 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemySprite1_0
+      name: SquirrelSprite_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 21
-        height: 15
+        width: 20
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8dc24ff41d1072fc0800000000000000
-      internalID: -3519842585265558312
+      spriteID: 23bd467ef090f1a49837c0e08faf9f9c
+      internalID: 1653070032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemySprite1_1
+      name: SquirrelSprite_1
       rect:
         serializedVersion: 2
-        x: 24
+        x: 21
         y: 0
-        width: 21
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: efac68cbaf26e5940800000000000000
-      internalID: 5286771841623837438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemySprite1_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 23
+        width: 20
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 945fef23c2511ce10800000000000000
-      internalID: 2216075771221308745
+      spriteID: 6f9afff86952c8443adfc8d23b4d0e0d
+      internalID: -1811121060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemySprite1_3
+      name: SquirrelSprite_2
       rect:
         serializedVersion: 2
-        x: 73
+        x: 42
         y: 0
-        width: 22
-        height: 9
+        width: 21
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 709f6737467f34850800000000000000
-      internalID: 6360199109583239431
+      spriteID: 4fcec762957694f4abfc1d66446b34b7
+      internalID: -316232701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SquirrelSprite_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ebf59e05bc1414e8c157aee20b4f56
+      internalID: -1859717337
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a13e7ab53af4e4d4ca1e05267548a216
     internalID: 0
     vertices: []
     indices: 
@@ -208,12 +208,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      EnemySprite1_0: -3519842585265558312
-      EnemySprite1_1: 5286771841623837438
-      EnemySprite1_2: 2216075771221308745
-      EnemySprite1_3: 6360199109583239431
+      SquirrelSprite_0: 1653070032
+      SquirrelSprite_1: -1811121060
+      SquirrelSprite_2: -316232701
+      SquirrelSprite_3: -1859717337
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
