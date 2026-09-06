@@ -1385,7 +1385,7 @@ GameObject:
   - component: {fileID: 411049774}
   - component: {fileID: 411049775}
   - component: {fileID: 411049776}
-  - component: {fileID: 411049777}
+  - component: {fileID: 411049778}
   m_Layer: 0
   m_Name: PlayerUnit
   m_TagString: Player
@@ -1519,19 +1519,28 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &411049777
-MonoBehaviour:
+--- !u!95 &411049778
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411049771}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f084582049a1af44f9cbb7b87bf5dbf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PlayerShooter
-  playerInput: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 245e0b4902f72804db2e2c543b9a26a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &439001777 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5924620844764863775, guid: 036441108112b0a4d8a3f6010fa7105d, type: 3}
@@ -12287,7 +12296,7 @@ Animator:
   m_GameObject: {fileID: 1273339329}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 245e0b4902f72804db2e2c543b9a26a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
