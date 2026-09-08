@@ -1,3 +1,4 @@
+using Assets.Scripts.Helpers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -39,11 +40,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnMove(InputAction.CallbackContext context)
     {
-        _moveInput = context.ReadValue<Vector2>();
-    }
-
-    private void FixedUpdate()
-    {
-        rb.linearVelocity = _moveInput * moveSpeed;
+        var moveInput = context.ReadValue<Vector2>();
+        Debug.LogWarning($"Move Input: {moveInput}");
+        UnitDirectionHelper.SetDirection(gameObject, moveInput);
+        UnitAnimationHelper.SetAnimationDirection(GetComponentInChildren<Animator>(), moveInput);
+        rb.linearVelocity = moveInput * moveSpeed;
     }
 }

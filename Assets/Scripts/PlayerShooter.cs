@@ -8,13 +8,12 @@ namespace Assets.Scripts
     {
         [SerializeField] private PlayerInput playerInput;
 
-        private IWeapon _currentWeapon;
-        private bool _isFirePressed;
+        private IRangeWeapon _currentWeapon;
 
         private void Awake()
         {
             if (playerInput == null) playerInput = GetComponentInParent<PlayerInput>();
-            _currentWeapon = GetComponent<IWeapon>();
+            _currentWeapon = GetComponent<IRangeWeapon>();
         }
 
         private void OnEnable()
@@ -33,15 +32,23 @@ namespace Assets.Scripts
                 playerInput.actions["Fire"].performed -= OnFirePerformed;
                 playerInput.actions["Fire"].canceled -= OnFireCanceled;
             }
+
+            CancelInvoke(nameof(FireTick));
         }
 
         private void OnFirePerformed(InputAction.CallbackContext context)
         {
             if (_currentWeapon == null) return;
 
-            if (_currentWeapon.IsAutomatic)
+            if (_currentWeapon.IsAutomatic && _currentWeapon.RateOfFire != null)
             {
-                _isFirePressed = true;
+                // первый выстрел сразу, дальше — по таймеру
+                FireTick();
+                InvokeRepeating(
+                    nameof(FireTick),
+                    _currentWeapon.RateOfFire.Value,
+                    _currentWeapon.RateOfFire.Value
+                );
             }
             else
             {
@@ -51,15 +58,12 @@ namespace Assets.Scripts
 
         private void OnFireCanceled(InputAction.CallbackContext context)
         {
-            _isFirePressed = false;
+            CancelInvoke(nameof(FireTick));
         }
 
-        private void Update()
+        private void FireTick()
         {
-            if (_isFirePressed && _currentWeapon != null && _currentWeapon.IsAutomatic)
-            {
-                _currentWeapon.Execute();
-            }
+            _currentWeapon?.Execute();
         }
     }
 }

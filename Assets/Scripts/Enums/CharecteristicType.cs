@@ -2,8 +2,11 @@
 {
     public enum CharecteristicType
     {
+        // SharedCharecteristics
         Speed = 0,
-        Damage = 1,
-        Health = 2,
+        Health = 1,
+
+        // EnemyCharecteristics
+        Damage = 2,
     }
 }

@@ -3,13 +3,15 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class RangedWeapon1 : MonoBehaviour, IWeapon
+    public class RangedWeapon1 : MonoBehaviour, IRangeWeapon
     {
         [Header("Weapon Interface Properties")]
         [field: SerializeField] public bool IsAutomatic { get; set; } = true;
         [field: SerializeField] public float Damage { get; set; } = 10f;
         [field: SerializeField] public float Distance { get; set; } = 15f;
-        [field: SerializeField] public int DeviationAngle { get; set; } = 5;
+        [field: SerializeField] public int DeviationAngle { get; set; } = 30;
+        [field: SerializeField] public float? RateOfFire { get; set; } = 0.5f;
+        [field: SerializeField] public int? MagazineRounds { get; set; } = 30;
 
         [Header("Spawn Settings")]
         [SerializeField] private Bullet bulletPrefab;
