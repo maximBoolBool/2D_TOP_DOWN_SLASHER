@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6448722183680480776
+--- !u!1001 &9183265189459759670
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 623662342864781170, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
       propertyPath: m_Name
-      value: CaterpillarEnemyPrefab
+      value: FlyEnemyPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 2502025894193044360, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 8480118543315194628, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: e35243a7a20a1984eb9af888b8f011bd, type: 2}
+      objectReference: {fileID: 22100000, guid: b1968adc09582014eaa719054a28ea33, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
