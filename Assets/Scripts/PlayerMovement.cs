@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private PlayerInput playerInput;
 
-    private Vector2 _moveInput;
 
     private void Awake()
     {
