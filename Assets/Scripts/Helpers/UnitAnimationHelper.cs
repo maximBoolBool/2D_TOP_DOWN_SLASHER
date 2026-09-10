@@ -12,10 +12,13 @@ namespace Assets.Scripts.Helpers
         {
             if (direction == Vector2.zero)
             {
+                Debug.Log($"ZZ {Vector2.zero}");
+                animator.ResetTrigger(IdleMovingTrigger);
                 animator.SetTrigger(MovingIdleTrigger);
                 return;
             }
 
+            animator.ResetTrigger(MovingIdleTrigger);
             animator.SetTrigger(IdleMovingTrigger);
         }
 

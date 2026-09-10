@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnMove(InputAction.CallbackContext context)
     {
         var moveInput = context.ReadValue<Vector2>();
-        Debug.LogWarning($"Move Input: {moveInput}");
+        Debug.Log($"Move Input: {moveInput}");
         UnitDirectionHelper.SetDirection(gameObject, moveInput);
         UnitAnimationHelper.SetAnimationDirection(GetComponentInChildren<Animator>(), moveInput);
         rb.linearVelocity = moveInput * moveSpeed;
