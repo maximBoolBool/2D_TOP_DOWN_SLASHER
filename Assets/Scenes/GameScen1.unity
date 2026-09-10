@@ -1531,9 +1531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f88b3799ce8604dba3b60c3915532a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PlayerDashBehaviorus
-  dashDistance: 1
-  dashDuration: 0.2
-  dashCooldown: 0.5
+  dashDistance: 4
+  dashDuration: 0.5
+  dashCooldown: 1.5
 --- !u!4 &439001777 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5924620844764863775, guid: 036441108112b0a4d8a3f6010fa7105d, type: 3}

@@ -53,6 +53,12 @@ namespace Assets.Scripts
 
         private IEnumerator PerformDash(Vector2 direction)
         {
+            if (_isDashing)
+            {
+                Debug.Log("Already dashing, cannot dash again.");
+                yield break;
+            }
+
             _isDashing = true;
             _canDash = false;
 
@@ -67,9 +73,10 @@ namespace Assets.Scripts
             }
 
             _rb.linearVelocity = Vector2.zero; // резкая остановка после рывка
-            _isDashing = false;
-
+           
             yield return new WaitForSeconds(dashCooldown - dashDuration);
+
+            _isDashing = false;
             _canDash = true;
         }
     }
