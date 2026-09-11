@@ -1,21 +1,19 @@
 ﻿using Assets.Scripts.Enums;
-using System.Collections.Generic;
+using Assets.Scripts.Helpers;
 using UnityEngine;
 
 namespace Assets.Scripts.Enemies
 {
-    public abstract class BaseEnemy : MonoBehaviour, ICharecteristic
+    public abstract class BaseEnemy : MonoBehaviour
     {
         protected Rigidbody2D rb;
         protected UnitCharecteristic unitCharecteristic;
         protected GameObject player;
 
         [SerializeField] protected LayerMask obstacleLayer;
-        [SerializeField] protected float obstacleCheckDistance = 1.5f;
+        [SerializeField] protected float obstacleCheckDistance = 1.5f;        
 
         public string Name { get; set; }
-        public Dictionary<CharecteristicType, int> BaseCharecteristics { get; set; }
-        public Dictionary<CharecteristicType, int> ActualCharacteristics { get; set; }
         public abstract void Execute();
 
         protected void BaseAwake()
@@ -38,7 +36,9 @@ namespace Assets.Scripts.Enemies
 
             Vector2 finalDirection = AvoidObstacles(desiredDirection);
 
-            rb.MovePosition(rb.position + finalDirection * ActualCharacteristics[CharecteristicType.Speed] * Time.fixedDeltaTime);
+            Debug.Log(finalDirection);
+            UnitAnimationHelper.SetAnimationDirection(GetComponent<Animator>(), finalDirection);
+            rb.MovePosition(rb.position + finalDirection * unitCharecteristic.ActualCharacteristics[CharecteristicType.Speed] * Time.fixedDeltaTime);
         }
 
         private Vector2 AvoidObstacles(Vector2 dir)

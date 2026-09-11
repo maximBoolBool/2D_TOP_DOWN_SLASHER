@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private PlayerInput playerInput;
 
-
     private void Awake()
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
@@ -40,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnMove(InputAction.CallbackContext context)
     {
         var moveInput = context.ReadValue<Vector2>();
-        Debug.Log($"Move Input: {moveInput}");
         UnitDirectionHelper.SetDirection(gameObject, moveInput);
         UnitAnimationHelper.SetAnimationDirection(GetComponentInChildren<Animator>(), moveInput);
         rb.linearVelocity = moveInput * moveSpeed;

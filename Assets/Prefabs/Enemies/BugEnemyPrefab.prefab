@@ -93,3 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ba80ec231eecb94a930c5dc3fcaa8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Enemies.BugEnemy
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  obstacleCheckDistance: 1.5
