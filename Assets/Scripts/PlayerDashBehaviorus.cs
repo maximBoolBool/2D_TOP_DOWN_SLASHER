@@ -74,7 +74,7 @@ namespace Assets.Scripts
 
             _rb.linearVelocity = Vector2.zero; // резкая остановка после рывка
            
-            yield return new WaitForSeconds(dashCooldown - dashDuration);
+            yield return new WaitForSeconds(dashCooldown);
 
             _isDashing = false;
             _canDash = true;
