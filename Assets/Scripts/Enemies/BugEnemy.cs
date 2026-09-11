@@ -9,13 +9,20 @@ namespace Assets.Scripts.Enemies
             BaseAwake();
         }
 
+        private void FixedUpdate()
+        {
+            Execute();
+        }
+
         public override void Execute()
         {
             if (!IsExecutionAvailable())
             {
                 return;
             }
-            Debug.Log("BugEnemy executed");
+
+            
+            MoveTowardsPlayer();
         }
     }
 }
