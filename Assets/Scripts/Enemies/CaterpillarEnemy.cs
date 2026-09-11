@@ -11,6 +11,10 @@ namespace Assets.Scripts.Enemies
 
         public override void Execute()
         {
+            if (!IsExecutionAvailable())
+            {
+                return;
+            }
             Debug.Log("CaterpillarEnemy executed");
         }
     }

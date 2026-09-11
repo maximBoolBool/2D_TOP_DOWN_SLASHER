@@ -33,6 +33,8 @@ namespace Assets.Scripts
             _unitStatusType = newUnitStatus;
         }
 
+        public bool IsAlive => _unitStatusType == UnitStatusType.Alive;
+
         public void SetDamage(int damage)
         {
             if (!ActualCharacteristics.TryGetValue(CharecteristicType.Health, out int currentHealth))
