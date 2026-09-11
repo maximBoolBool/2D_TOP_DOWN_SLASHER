@@ -12,6 +12,8 @@ namespace Assets.Scripts
         [SerializeField]
         private int health = 1;
 
+        private UnitStatusType _unitStatusType;
+
         public void Awake()
         {
             BaseCharecteristics = new Dictionary<CharecteristicType, int>
@@ -20,10 +22,16 @@ namespace Assets.Scripts
                 { CharecteristicType.Health, health }
             };
             ActualCharacteristics = new Dictionary<CharecteristicType, int>(BaseCharecteristics);
+            _unitStatusType = UnitStatusType.Alive;
         }
 
         public Dictionary<CharecteristicType, int> BaseCharecteristics { get; set; }
         public Dictionary<CharecteristicType, int> ActualCharacteristics { get; set; }
+
+        public void SetStatus(UnitStatusType newUnitStatus)
+        {
+            _unitStatusType = newUnitStatus;
+        }
 
         public void SetDamage(int damage)
         {
