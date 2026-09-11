@@ -52,6 +52,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6281058197988486431, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281058197988486431, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3519842585265558312, guid: c3f762e276825c64c81fc0aabc15aee1, type: 3}
+    - target: {fileID: 6281058197988486431, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8480118543315194628, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
       propertyPath: m_Controller
       value: 
@@ -59,5 +71,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 623662342864781170, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7760168050368913297}
   m_SourcePrefab: {fileID: 100100000, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
+--- !u!1 &2089243736475418740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 623662342864781170, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
+  m_PrefabInstance: {fileID: 1466429117819649798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7760168050368913297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089243736475418740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba80ec231eecb94a930c5dc3fcaa8b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Enemies.BugEnemy

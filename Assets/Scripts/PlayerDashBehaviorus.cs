@@ -6,8 +6,8 @@ namespace Assets.Scripts
 {
     public class PlayerDashBehaviorus : MonoBehaviour
     {
-        [SerializeField] private float dashDistance = 0.001f;    // всего 2 метра — короткий
-        [SerializeField] private float dashDuration = 0.4f;  // растянут на 0.4 сек — не резкий рывок
+        [SerializeField] private float dashDistance = 0.001f;
+        [SerializeField] private float dashDuration = 0.4f;
         [SerializeField] private float dashCooldown = 1f;
         private Rigidbody2D _rb;
         private PlayerInput _playerInput;
@@ -72,11 +72,11 @@ namespace Assets.Scripts
                 yield return new WaitForFixedUpdate();
             }
 
-            _rb.linearVelocity = Vector2.zero; // резкая остановка после рывка
-           
-            yield return new WaitForSeconds(dashCooldown);
+            _rb.linearVelocity = Vector2.zero;
 
             _isDashing = false;
+            yield return new WaitForSeconds(dashCooldown);
+
             _canDash = true;
         }
     }

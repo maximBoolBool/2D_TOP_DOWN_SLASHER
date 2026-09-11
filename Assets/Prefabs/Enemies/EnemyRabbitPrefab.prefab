@@ -109,8 +109,28 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2502025894193044360, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5519072919999200537}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 623662342864781170, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1862063563875383463}
   m_SourcePrefab: {fileID: 100100000, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
+--- !u!1 &4842600409138818495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 623662342864781170, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}
+  m_PrefabInstance: {fileID: 5445959099749454541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-1862063563875383463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4842600409138818495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4f7cf3e28d09a4e8320ce8bdd7ae12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Enemies.EnemyRabbit
 --- !u!4 &7578174686118005061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2502025894193044360, guid: 61797cf1e5c686245821c69cdafbde2c, type: 3}

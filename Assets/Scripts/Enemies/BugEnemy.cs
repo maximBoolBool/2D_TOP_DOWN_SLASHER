@@ -1,11 +1,17 @@
-﻿namespace Assets.Scripts.Enemies
+﻿using UnityEngine;
+
+namespace Assets.Scripts.Enemies
 {
     public class BugEnemy : BaseEnemy
     {
+        public void Awake()
+        {
+            BaseAwake();
+        }
+
         public override void Execute()
         {
-            return;
-            throw new System.NotImplementedException();
+            Debug.Log("BugEnemy executed");
         }
     }
 }

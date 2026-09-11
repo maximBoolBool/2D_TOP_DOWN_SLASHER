@@ -1,15 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Enemies
 {
     internal class CaterpillarEnemy : BaseEnemy
     {
+        public void Awake()
+        {
+            BaseAwake();
+        }
+
         public override void Execute()
         {
-            return;
-            throw new NotImplementedException();
+            Debug.Log("CaterpillarEnemy executed");
         }
     }
 }
