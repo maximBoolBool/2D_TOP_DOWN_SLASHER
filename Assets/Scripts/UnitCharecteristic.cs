@@ -47,6 +47,7 @@ namespace Assets.Scripts
             if (resultHealthPoints == 0)
             {
                 UnitAnimationHelper.SetDeadAnimation(GetComponent<Animator>());
+                SetStatus(UnitStatusType.Dead);
             }
         }
     }
