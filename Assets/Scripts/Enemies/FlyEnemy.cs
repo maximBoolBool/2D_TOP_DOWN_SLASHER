@@ -4,7 +4,7 @@ namespace Assets.Scripts.Enemies
 {
     public class FlyEnemy : BaseEnemy
     {
-        public void Awake()
+        private void Awake()
         {
             BaseAwake();
         }

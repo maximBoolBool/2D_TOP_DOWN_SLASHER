@@ -4,13 +4,14 @@ namespace Assets.Scripts.Enemies
 {
     public class BugEnemy : BaseEnemy
     {
-        public void Awake()
+        private void Awake()
         {
             BaseAwake();
         }
 
         private void FixedUpdate()
         {
+            Debug.LogWarning($"FixedUpdate");
             Execute();
         }
 
@@ -18,10 +19,11 @@ namespace Assets.Scripts.Enemies
         {
             if (!IsExecutionAvailable())
             {
+                Debug.LogWarning($"1");
                 return;
             }
 
-            
+            Debug.LogWarning($"2");
             MoveTowardsPlayer();
         }
     }
