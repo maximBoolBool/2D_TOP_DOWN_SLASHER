@@ -37,7 +37,8 @@ namespace Assets.Scripts.Enemies
             Vector2 finalDirection = AvoidObstacles(desiredDirection);
 
             Debug.Log(finalDirection);
-            UnitAnimationHelper.SetAnimationDirection(GetComponent<Animator>(), finalDirection);
+            UnitDirectionHelper.SetDirection(gameObject, finalDirection);
+            UnitAnimationHelper.SetAnimation(GetComponent<Animator>(), finalDirection);
             rb.MovePosition(rb.position + finalDirection * unitCharecteristic.ActualCharacteristics[CharecteristicType.Speed] * Time.fixedDeltaTime);
         }
 

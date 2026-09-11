@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using Assets.Scripts.Helpers;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,11 +12,13 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private UnitCharecteristic unitCharecteristic;
 
     private void Awake()
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         if (playerInput == null) playerInput = GetComponent<PlayerInput>();
+        if (unitCharecteristic == null) unitCharecteristic = GetComponent<UnitCharecteristic>();
     }
 
     private void OnEnable()
@@ -40,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     {
         var moveInput = context.ReadValue<Vector2>();
         UnitDirectionHelper.SetDirection(gameObject, moveInput);
-        UnitAnimationHelper.SetAnimationDirection(GetComponentInChildren<Animator>(), moveInput);
+        UnitAnimationHelper.SetAnimation(GetComponentInChildren<Animator>(), moveInput);
         rb.linearVelocity = moveInput * moveSpeed;
     }
 }
