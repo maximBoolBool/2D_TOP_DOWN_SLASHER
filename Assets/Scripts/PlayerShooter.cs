@@ -6,14 +6,14 @@ namespace Assets.Scripts
 {
     public class PlayerShooter : MonoBehaviour
     {
-        [SerializeField] private PlayerInput playerInput;
+        private PlayerInput playerInput;
 
-        private IRangeWeapon _currentWeapon;
+        private RangeWeapon _currentWeapon;
 
         private void Awake()
         {
-            if (playerInput == null) playerInput = GetComponentInParent<PlayerInput>();
-            _currentWeapon = GetComponent<IRangeWeapon>();
+            playerInput = GetComponentInParent<PlayerInput>();
+            _currentWeapon = GetComponentInChildren<RangeWeapon>();
         }
 
         private void OnEnable()

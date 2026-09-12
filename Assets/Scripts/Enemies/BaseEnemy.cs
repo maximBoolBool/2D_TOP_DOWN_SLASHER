@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Enums;
+﻿using Assets.Scripts.Constants;
+using Assets.Scripts.Enums;
 using Assets.Scripts.Helpers;
 using UnityEngine;
 
@@ -20,7 +21,7 @@ namespace Assets.Scripts.Enemies
         {
             unitCharecteristic = GetComponent<UnitCharecteristic>();
             rb = GetComponent<Rigidbody2D>();
-            player = GameObject.FindGameObjectWithTag("Player");
+            player = GameObject.FindGameObjectWithTag(TagConstants.PLAYER);
         }
 
         protected bool IsExecutionAvailable() => unitCharecteristic.IsAlive;

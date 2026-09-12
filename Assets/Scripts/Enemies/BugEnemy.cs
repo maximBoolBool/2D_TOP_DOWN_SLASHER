@@ -11,7 +11,6 @@ namespace Assets.Scripts.Enemies
 
         private void FixedUpdate()
         {
-            Debug.LogWarning($"FixedUpdate");
             Execute();
         }
 
@@ -19,11 +18,9 @@ namespace Assets.Scripts.Enemies
         {
             if (!IsExecutionAvailable())
             {
-                Debug.LogWarning($"1");
                 return;
             }
 
-            Debug.LogWarning($"2");
             MoveTowardsPlayer();
         }
     }

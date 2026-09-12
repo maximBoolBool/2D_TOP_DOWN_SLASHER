@@ -39,7 +39,6 @@ namespace Assets.Scripts
         {
             if (!ActualCharacteristics.TryGetValue(CharecteristicType.Health, out int currentHealth))
             {
-                Debug.LogWarning("Health characteristic not found.");
                 return;
             }
 

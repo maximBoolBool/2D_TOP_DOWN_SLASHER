@@ -3,9 +3,8 @@ using UnityEngine.InputSystem;
 
 namespace Assets.Scripts
 {
-    public class WeaponAiming : MonoBehaviour
+    public class PlayerWeaponAiming : MonoBehaviour
     {
-        [SerializeField]
         private Camera mainCamera;
         private SpriteRenderer _spriteRenderer;
         private PlayerInput _playerInput;
@@ -14,7 +13,7 @@ namespace Assets.Scripts
         {
             if (mainCamera == null) mainCamera = Camera.main;
 
-            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             _playerInput = GetComponentInParent<PlayerInput>();
         }
 

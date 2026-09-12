@@ -1,13 +1,14 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Constants;
+using Assets.Scripts.Enums;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
-    using UnityEngine;
-
-    [RequireComponent(typeof(Rigidbody2D))] // Гарантирует наличие Rigidbody2D
+    [RequireComponent(typeof(Rigidbody2D))]
     public class Bullet : MonoBehaviour
     {
         [SerializeField] private float speed = 10f;
+        [SerializeField] private TargetType _sideType = TargetType.All;
         private Rigidbody2D _rb;
 
         private float _damage;
@@ -42,9 +43,14 @@ namespace Assets.Scripts
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player")) return;
+            Debug.LogWarning($"Bullet collided with {collision.gameObject.name}");
 
-            if (collision.gameObject.CompareTag("Enemy"))
+            if (collision.gameObject.CompareTag(TagConstants.PLAYER))
+            {
+                return;
+            }
+
+            if (collision.gameObject.CompareTag(TagConstants.ENEMY))
             {
                 collision.gameObject.GetComponent<UnitCharecteristic>()?.SetDamage((int)_damage);
             }
