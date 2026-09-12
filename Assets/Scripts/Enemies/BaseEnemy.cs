@@ -35,8 +35,7 @@ namespace Assets.Scripts.Enemies
             Vector2 desiredDirection = (player.transform.position - transform.position).normalized;
             float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-            RaycastHit2D losHit = Physics2D.Raycast(transform.position, desiredDirection, distanceToPlayer, obstacleLayer);
-            if (losHit.collider != null)
+            if (!LineOfSightHelper.IsHasLineOfSight(transform.position, desiredDirection, distanceToPlayer, obstacleLayer))
             {
                 return;
             }
