@@ -1,19 +1,22 @@
 ﻿using Assets.Scripts.Models;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.PlayerControllers
 {
-    public class PlayerShooter : MonoBehaviour
+    public class PlayerShootController : MonoBehaviour
     {
         private PlayerInput playerInput;
 
-        private RangeWeapon _currentWeapon;
+        private RangeWeapon[] _weapons;
+
+        private RangeWeapon[] AutomaticWeapon => _weapons.Where(w => w.IsAutomatic).ToArray();
 
         private void Awake()
         {
             playerInput = GetComponentInParent<PlayerInput>();
-            _currentWeapon = GetComponentInChildren<RangeWeapon>();
+            _weapons = GetComponentsInChildren<RangeWeapon>();
         }
 
         private void OnEnable()
@@ -38,32 +41,40 @@ namespace Assets.Scripts
 
         private void OnFirePerformed(InputAction.CallbackContext context)
         {
-            if (_currentWeapon == null) return;
-
-            if (_currentWeapon.IsAutomatic && _currentWeapon.RateOfFire != null)
+            if (AutomaticWeapon.Any())
             {
-                // первый выстрел сразу, дальше — по таймеру
-                FireTick();
+                var minRateOfFire = AutomaticWeapon.Min(w => w.RateOfFire);
+                FireTick(false);
                 InvokeRepeating(
-                    nameof(FireTick),
-                    _currentWeapon.RateOfFire.Value,
-                    _currentWeapon.RateOfFire.Value
+                    nameof(AutomaticFireTick),
+                    minRateOfFire,
+                    minRateOfFire
                 );
             }
             else
             {
-                _currentWeapon.Execute();
+                FireTick(false);
             }
         }
 
         private void OnFireCanceled(InputAction.CallbackContext context)
         {
-            CancelInvoke(nameof(FireTick));
+            CancelInvoke(nameof(AutomaticFireTick));
         }
 
-        private void FireTick()
+        private void AutomaticFireTick()
         {
-            _currentWeapon?.Execute();
+            FireTick(true);
+        }
+
+        private void FireTick(bool onlyAutomatic)
+        {
+            var weapons = onlyAutomatic ? AutomaticWeapon : _weapons;
+
+            foreach (var weapon in weapons)
+            {
+                weapon.Execute();
+            }
         }
     }
 }

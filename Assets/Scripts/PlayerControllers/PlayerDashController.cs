@@ -2,9 +2,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.PlayerControllers
 {
-    public class PlayerDashBehaviorus : MonoBehaviour
+    public class PlayerDashController : MonoBehaviour
     {
         [SerializeField] private float dashDistance = 0.001f;
         [SerializeField] private float dashDuration = 0.4f;
@@ -55,7 +55,6 @@ namespace Assets.Scripts
         {
             if (_isDashing)
             {
-                Debug.Log("Already dashing, cannot dash again.");
                 yield break;
             }
 

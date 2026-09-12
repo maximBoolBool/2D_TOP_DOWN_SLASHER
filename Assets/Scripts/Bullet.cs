@@ -43,9 +43,12 @@ namespace Assets.Scripts
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            Debug.LogWarning($"Bullet collided with {collision.gameObject.name}");
-
             if (collision.gameObject.CompareTag(TagConstants.PLAYER))
+            {
+                return;
+            }
+
+            if (collision.gameObject.CompareTag(TagConstants.BULLET))
             {
                 return;
             }

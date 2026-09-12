@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.PlayerControllers
 {
-    public class PlayerWeaponAiming : MonoBehaviour
+    public class PlayerWeaponAimController : MonoBehaviour
     {
         private Camera mainCamera;
         private SpriteRenderer _spriteRenderer;
