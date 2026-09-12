@@ -1,64 +1,49 @@
-using System.Collections;
+using Assets.Scripts;
+using Assets.Scripts.Helpers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1f;
+    [Header("Settings")]
+    [SerializeField] private float moveSpeed = 3f;
 
-    private PlayerControls controls;
-    private Vector2 currentInput;
-    private Coroutine moveCoroutine;
+    [Header("References")]
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private UnitCharecteristic unitCharecteristic;
 
     private void Awake()
     {
-        controls = new PlayerControls();
-        controls.Player.Move.performed += OnMovePerformed;
-        controls.Player.Move.canceled += OnMoveCanceled;
+        if (rb == null) rb = GetComponent<Rigidbody2D>();
+        if (playerInput == null) playerInput = GetComponent<PlayerInput>();
+        if (unitCharecteristic == null) unitCharecteristic = GetComponent<UnitCharecteristic>();
     }
 
-    private void OnEnable() => controls.Enable();
+    private void OnEnable()
+    {
+        if (playerInput != null)
+        {
+            playerInput.actions["Move"].performed += OnMove;
+            playerInput.actions["Move"].canceled += OnMove;
+        }
+    }
 
     private void OnDisable()
     {
-        controls.Disable();
-        StopMoveLoop();
-    }
-
-    private void OnMovePerformed(InputAction.CallbackContext context)
-    {
-        currentInput = context.ReadValue<Vector2>();
-
-        if (moveCoroutine == null)
+        if (playerInput != null)
         {
-            moveCoroutine = StartCoroutine(MoveLoop());
+            playerInput.actions["Move"].performed -= OnMove;
+            playerInput.actions["Move"].canceled -= OnMove;
         }
     }
 
-    private void OnMoveCanceled(InputAction.CallbackContext context)
+    private void OnMove(InputAction.CallbackContext context)
     {
-        currentInput = Vector2.zero;
-        StopMoveLoop();
-    }
-
-    private IEnumerator MoveLoop()
-    {
-        while (currentInput != Vector2.zero)
-        {
-            Vector3 moveDirection = new Vector3(currentInput.x, currentInput.y, 0f);
-            transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
-            yield return null;
-        }
-
-        moveCoroutine = null;
-    }
-
-    private void StopMoveLoop()
-    {
-        if (moveCoroutine != null)
-        {
-            StopCoroutine(moveCoroutine);
-            moveCoroutine = null;
-        }
+        var moveInput = context.ReadValue<Vector2>();
+        UnitDirectionHelper.SetDirection(gameObject, moveInput);
+        UnitAnimationHelper.SetAnimation(GetComponentInChildren<Animator>(), moveInput);
+        rb.linearVelocity = moveInput * moveSpeed;
     }
 }
