@@ -49,6 +49,8 @@ namespace Assets.Scripts.Enemies
             rb.MovePosition(rb.position + finalDirection * unitCharecteristic.ActualCharacteristics[CharecteristicType.Speed] * Time.fixedDeltaTime);
         }
 
+
+
         private Vector2 AvoidObstacles(Vector2 dir)
         {
             float[] angles = new float[] { 0, -30f, 30f, -60f, 60f };
