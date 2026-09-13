@@ -78,7 +78,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8252393546063426278, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -1401366007827116144}
+      addedObject: {fileID: 3924858574685704867}
   m_SourcePrefab: {fileID: 100100000, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
 --- !u!4 &1070201966351985454 stripped
 Transform:
@@ -90,7 +90,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8252393546063426278, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
   m_PrefabInstance: {fileID: 4201750947191466015}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-1401366007827116144
+--- !u!114 &3924858574685704867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,16 +99,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5244998172674366201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c72b45a926341b438511af992d88676, type: 3}
+  m_Script: {fileID: 11500000, guid: 64240b95cfa17b14da55554d733d9f7b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Weapons.Shotguns_2
-  <Tittle>k__BackingField: Automatic shotgun
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Weapons.RangeWeapon
+  <Title>k__BackingField: 
   <Damage>k__BackingField: 5
   <IsAutomatic>k__BackingField: 1
-  <Distance>k__BackingField: 4
-  <RateOfFire>k__BackingField: 0.2
+  <Distance>k__BackingField: 3
+  <RateOfFire>k__BackingField: 0.4
   <MagazineRounds>k__BackingField: 1
-  <DeviationAngle>k__BackingField: 45
+  <DeviationAngle>k__BackingField: 30
+  SubBulletsCount: 4
   bulletPrefab: {fileID: 1704145761878202281, guid: 3591246e95d91014fb443803cea29e18, type: 3}
   firePoint: {fileID: 1070201966351985454}
-  SubBulletsCount: 4

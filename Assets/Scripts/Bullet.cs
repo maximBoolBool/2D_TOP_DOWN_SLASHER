@@ -8,7 +8,7 @@ namespace Assets.Scripts
     public class Bullet : MonoBehaviour
     {
         [SerializeField] private float speed = 10f;
-        [SerializeField] private TargetType _sideType = TargetType.All;
+        [SerializeField] private TargetType _targetType = TargetType.All;
         private Rigidbody2D _rb;
 
         private float _damage;

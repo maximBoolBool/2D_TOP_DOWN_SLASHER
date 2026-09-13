@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.Models;
+﻿using Assets.Scripts.Weapons;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;

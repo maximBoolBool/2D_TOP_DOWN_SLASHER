@@ -82,14 +82,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8252393546063426278, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6127417682403554165}
+      addedObject: {fileID: -160394356984832944}
   m_SourcePrefab: {fileID: 100100000, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
 --- !u!1 &4562677039062567196 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8252393546063426278, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
   m_PrefabInstance: {fileID: 5609099894644145146}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6127417682403554165
+--- !u!114 &-160394356984832944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,16 +98,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4562677039062567196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d44c3fd74c9ee498fc927d53604cde, type: 3}
+  m_Script: {fileID: 11500000, guid: 64240b95cfa17b14da55554d733d9f7b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Weapons.Rifle_1
-  <Tittle>k__BackingField: Sniper rifle
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Weapons.RangeWeapon
+  <Title>k__BackingField: 
   <Damage>k__BackingField: 30
   <IsAutomatic>k__BackingField: 0
   <Distance>k__BackingField: 30
-  <RateOfFire>k__BackingField: 5
+  <RateOfFire>k__BackingField: 3
   <MagazineRounds>k__BackingField: 1
   <DeviationAngle>k__BackingField: 5
+  SubBulletsCount: 0
   bulletPrefab: {fileID: 157074584526547586, guid: f666ed51b1b06cf42b8570dfa994a169, type: 3}
   firePoint: {fileID: 8737554610319161547}
 --- !u!4 &8737554610319161547 stripped

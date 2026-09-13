@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1162433770846384008, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2541341542375325238, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -82,7 +86,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8252393546063426278, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7674882116951946438}
+      addedObject: {fileID: 9009582716417955461}
   m_SourcePrefab: {fileID: 100100000, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
 --- !u!4 &2969962665250510695 stripped
 Transform:
@@ -94,7 +98,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8252393546063426278, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
   m_PrefabInstance: {fileID: 2135529155519468630}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7674882116951946438
+--- !u!114 &9009582716417955461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,15 +107,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8008675875122603696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048efbea4a4068f4692c1d4d1dba7add, type: 3}
+  m_Script: {fileID: 11500000, guid: 64240b95cfa17b14da55554d733d9f7b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.AssaultRifle_1
-  <Tittle>k__BackingField: Gallaxy Empire Assault Rifle
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Weapons.RangeWeapon
+  <Title>k__BackingField: 
   <Damage>k__BackingField: 15
   <IsAutomatic>k__BackingField: 1
   <Distance>k__BackingField: 20
   <RateOfFire>k__BackingField: 0.5
   <MagazineRounds>k__BackingField: 1
   <DeviationAngle>k__BackingField: 25
+  SubBulletsCount: 1
   bulletPrefab: {fileID: 1704145761878202281, guid: 3591246e95d91014fb443803cea29e18, type: 3}
   firePoint: {fileID: 2969962665250510695}

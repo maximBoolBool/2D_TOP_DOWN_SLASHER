@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Assets.Scripts.Enemies
+﻿namespace Assets.Scripts.Enemies
 {
     public class BugEnemy : BaseEnemy
     {
