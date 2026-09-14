@@ -43,17 +43,14 @@ namespace Assets.Scripts
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag(TagConstants.PLAYER))
-            {
-                return;
-            }
-
             if (collision.gameObject.CompareTag(TagConstants.BULLET))
             {
                 return;
             }
 
-            if (collision.gameObject.CompareTag(TagConstants.ENEMY))
+            if ((collision.gameObject.CompareTag(TagConstants.PLAYER) && _targetType == TargetType.Player)
+                || (collision.gameObject.CompareTag(TagConstants.ENEMY) && _targetType == TargetType.Enemy)
+            )
             {
                 collision.gameObject.GetComponent<UnitCharecteristic>()?.SetDamage((int)_damage);
             }

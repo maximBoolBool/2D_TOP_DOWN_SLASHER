@@ -7,15 +7,15 @@ namespace Assets.Scripts.PlayerControllers
 {
     public class PlayerShootController : MonoBehaviour
     {
-        private PlayerInput playerInput;
-
+        private UnitCharecteristic unitCharecteristic;
         private RangeWeapon[] _weapons;
-
+        private PlayerInput playerInput;
         private RangeWeapon[] AutomaticWeapon => _weapons.Where(w => w.IsAutomatic).ToArray();
 
         private void Awake()
         {
             playerInput = GetComponentInParent<PlayerInput>();
+            unitCharecteristic = GetComponentInParent<UnitCharecteristic>();
             _weapons = GetComponentsInChildren<RangeWeapon>();
         }
 
@@ -41,6 +41,11 @@ namespace Assets.Scripts.PlayerControllers
 
         private void OnFirePerformed(InputAction.CallbackContext context)
         {
+            if(!unitCharecteristic.IsAlive)
+            {
+                return;
+            }
+
             if (AutomaticWeapon.Any())
             {
                 var minRateOfFire = AutomaticWeapon.Min(w => w.RateOfFire);

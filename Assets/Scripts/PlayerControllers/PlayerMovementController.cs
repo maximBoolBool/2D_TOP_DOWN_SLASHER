@@ -7,43 +7,48 @@ using UnityEngine.InputSystem;
 public class PlayerMovementController : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] private float _moveSpeed = 3f;
 
     [Header("References")]
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private UnitCharecteristic unitCharecteristic;
+    private Rigidbody2D _rb;
+    private PlayerInput _playerInput;
+    private UnitCharecteristic _unitCharecteristic;
 
     private void Awake()
     {
-        if (rb == null) rb = GetComponent<Rigidbody2D>();
-        if (playerInput == null) playerInput = GetComponent<PlayerInput>();
-        if (unitCharecteristic == null) unitCharecteristic = GetComponent<UnitCharecteristic>();
+        _rb = GetComponent<Rigidbody2D>();
+        _playerInput = GetComponent<PlayerInput>();
+        _unitCharecteristic = GetComponent<UnitCharecteristic>();
     }
 
     private void OnEnable()
     {
-        if (playerInput != null)
+        if (_playerInput != null)
         {
-            playerInput.actions["Move"].performed += OnMove;
-            playerInput.actions["Move"].canceled += OnMove;
+            _playerInput.actions["Move"].performed += OnMove;
+            _playerInput.actions["Move"].canceled += OnMove;
         }
     }
 
     private void OnDisable()
     {
-        if (playerInput != null)
+        if (_playerInput != null)
         {
-            playerInput.actions["Move"].performed -= OnMove;
-            playerInput.actions["Move"].canceled -= OnMove;
+            _playerInput.actions["Move"].performed -= OnMove;
+            _playerInput.actions["Move"].canceled -= OnMove;
         }
     }
 
     private void OnMove(InputAction.CallbackContext context)
     {
+        if(!_unitCharecteristic.IsAlive)
+        {
+            return;
+        }
+
         var moveInput = context.ReadValue<Vector2>();
         UnitDirectionHelper.SetDirection(gameObject, moveInput);
         UnitAnimationHelper.SetAnimation(GetComponentInChildren<Animator>(), moveInput);
-        rb.linearVelocity = moveInput * moveSpeed;
+        _rb.linearVelocity = moveInput * _moveSpeed;
     }
 }

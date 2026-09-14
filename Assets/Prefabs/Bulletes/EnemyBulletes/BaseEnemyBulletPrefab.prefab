@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingOrder: 500
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1865952339040183261, guid: 5ed8160b6e6e1ae4aaf27ee1cbe4e33c, type: 3}
-  m_Color: {r: 0.8415094, g: 0.12484372, b: 0.068273336, a: 1}
+  m_Color: {r: 0.7509433, g: 0.21796241, b: 0.17427546, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -171,4 +171,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Bullet
   speed: 15
-  _sideType: 0
+  _targetType: 0

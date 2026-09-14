@@ -171,4 +171,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Bullet
   speed: 15
-  _sideType: 2
+  _targetType: 1

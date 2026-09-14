@@ -15,10 +15,13 @@ namespace Assets.Scripts.PlayerControllers
         private Camera _mainCamera;
         private bool _isDashing;
         private bool _canDash = true;
+        private UnitCharecteristic _unitCharecteristic;
+
         public bool IsDashing => _isDashing;
 
         private void Awake()
         {
+            _unitCharecteristic = GetComponent<UnitCharecteristic>();
             _mainCamera = Camera.main;
             _rb = GetComponent<Rigidbody2D>();
             _playerInput = GetComponent<PlayerInput>();
@@ -43,6 +46,11 @@ namespace Assets.Scripts.PlayerControllers
 
         private void OnDash(InputAction.CallbackContext context)
         {
+            if(!_unitCharecteristic.IsAlive || !_canDash)
+            {
+                return;
+            }
+
             var mouseScreenPosition = _aimAction.ReadValue<Vector2>();
             var mouseWorldPosition = _mainCamera.ScreenToWorldPoint(mouseScreenPosition);
             var gameObjectPosition = transform.position;

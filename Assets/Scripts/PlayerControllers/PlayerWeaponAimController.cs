@@ -8,13 +8,14 @@ namespace Assets.Scripts.PlayerControllers
         private Camera mainCamera;
         private SpriteRenderer _spriteRenderer;
         private PlayerInput _playerInput;
+        private UnitCharecteristic _charecteristic;
 
         private void Awake()
         {
-            if (mainCamera == null) mainCamera = Camera.main;
-
+            mainCamera = Camera.main;
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             _playerInput = GetComponentInParent<PlayerInput>();
+            _charecteristic = GetComponentInParent<UnitCharecteristic>();
         }
 
         private void OnEnable()
@@ -35,6 +36,11 @@ namespace Assets.Scripts.PlayerControllers
 
         private void OnAimPerformed(InputAction.CallbackContext context)
         {
+            if (!_charecteristic.IsAlive)
+            {
+                return;
+            }
+
             Vector2 mouseScreenPosition = context.ReadValue<Vector2>();
 
             Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(mouseScreenPosition);
