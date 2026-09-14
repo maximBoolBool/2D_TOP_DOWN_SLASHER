@@ -48,7 +48,7 @@ public class PlayerMovementController : MonoBehaviour
 
         var moveInput = context.ReadValue<Vector2>();
         UnitDirectionHelper.SetDirection(gameObject, moveInput);
-        UnitAnimationHelper.SetAnimation(GetComponentInChildren<Animator>(), moveInput);
+        UnitAnimationHelper.SetAnimation(GetComponent<Animator>(), moveInput);
         _rb.linearVelocity = moveInput * _moveSpeed;
     }
 }
