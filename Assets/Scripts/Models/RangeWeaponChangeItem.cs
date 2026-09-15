@@ -39,7 +39,7 @@ namespace Assets.Scripts.Models
 
             PlayerWeaponHelper.ChangeWeapon(aimPart.gameObject, _rangeWeaponPrefab);
 
-            Destroy(gameObject);
+            Destroy(gameObject.transform.parent.gameObject);
         }
     }
 }

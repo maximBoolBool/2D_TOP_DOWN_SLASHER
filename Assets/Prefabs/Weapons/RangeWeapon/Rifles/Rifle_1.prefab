@@ -108,7 +108,7 @@ MonoBehaviour:
   <RateOfFire>k__BackingField: 3
   <MagazineRounds>k__BackingField: 1
   <DeviationAngle>k__BackingField: 5
-  SubBulletsCount: 0
+  SubBulletsCount: 1
   bulletPrefab: {fileID: 157074584526547586, guid: f666ed51b1b06cf42b8570dfa994a169, type: 3}
   firePoint: {fileID: 8737554610319161547}
 --- !u!4 &8737554610319161547 stripped
