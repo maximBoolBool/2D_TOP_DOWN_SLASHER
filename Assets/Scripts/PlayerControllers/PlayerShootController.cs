@@ -19,6 +19,11 @@ namespace Assets.Scripts.PlayerControllers
             _weapons = GetComponentsInChildren<RangeWeapon>();
         }
 
+        public void RefreshWeapons()
+        {
+            _weapons = GetComponentsInChildren<RangeWeapon>();
+        }
+
         private void OnEnable()
         {
             if (playerInput != null)

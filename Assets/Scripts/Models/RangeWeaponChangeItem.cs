@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Constants;
+using Assets.Scripts.Helpers;
 using Assets.Scripts.Weapons;
 using UnityEngine;
 
@@ -35,8 +36,10 @@ namespace Assets.Scripts.Models
         {
             var player = GameObject.FindGameObjectWithTag(TagConstants.PLAYER);
             var aimPart = player.transform.Find("AimShootUnitPart");         
-            var newWeapon = Instantiate(_rangeWeaponPrefab, aimPart);
-            newWeapon.transform.localPosition = Vector3.zero;
+
+            PlayerWeaponHelper.ChangeWeapon(aimPart.gameObject, _rangeWeaponPrefab);
+
+            Destroy(gameObject);
         }
     }
 }

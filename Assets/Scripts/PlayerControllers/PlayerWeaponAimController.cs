@@ -18,6 +18,11 @@ namespace Assets.Scripts.PlayerControllers
             _charecteristic = GetComponentInParent<UnitCharecteristic>();
         }
 
+        public void RefreshSprite()
+        {
+            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
+
         private void OnEnable()
         {
             if (_playerInput != null)

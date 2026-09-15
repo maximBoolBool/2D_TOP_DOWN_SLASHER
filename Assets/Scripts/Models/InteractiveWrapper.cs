@@ -23,8 +23,8 @@ namespace Assets.Scripts.Models
         private void Awake()
         {
             _interactiveItem = GetComponentInChildren<BaseInteractiveItem>();
-            animator = GetComponent<Animator>();
             _buttonLable = transform.Find("ButtonSprite").gameObject;
+            animator = _buttonLable.GetComponent<Animator>();
             _buttonLable.SetActive(false);
         }
 
