@@ -70,6 +70,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1862063563875383463, guid: 3d69a9b510636dd40b40a7a901e29574, type: 3}
+      propertyPath: _aimUpdateInterval
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4842600409138818495, guid: 3d69a9b510636dd40b40a7a901e29574, type: 3}
       propertyPath: m_Name
       value: EnemyRabbitPrefab Variant

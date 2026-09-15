@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c004bf87c1d70554d8b2e40090eddfda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Models.RangeWeaponChangeItem
-  _rangeWeaponPrefab: {fileID: -160394356984832944, guid: 3b4aeb8972917274687badd8768a7ad3, type: 3}
+  _rangeWeaponPrefab: {fileID: 0}
 --- !u!1001 &5532462620575457986
 PrefabInstance:
   m_ObjectHideFlags: 0
