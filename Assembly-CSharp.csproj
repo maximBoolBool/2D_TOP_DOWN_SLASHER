@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\Enums\CharecteristicType.cs" />
     <Compile Include="Assets\Scripts\GameStates\GlobalGameState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\PlayerControllers\PlayerInteractController.cs" />
     <Compile Include="Assets\Scripts\Models\BaseInteractiveItem.cs" />
     <Compile Include="Assets\Scripts\Enums\TargetType.cs" />
     <Compile Include="Assets\Scripts\PlayerControllers\PlayerDashController.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\Enemies\FlyEnemy.cs" />
+    <Compile Include="Assets\Scripts\Models\InteractiveWrapper.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\PlayerControllers\PlayerWeaponAimController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
