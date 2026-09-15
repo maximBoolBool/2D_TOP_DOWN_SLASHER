@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\PlayerControllers\PlayerWeaponAimController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\InputActions\PlayerControls.cs" />
+    <Compile Include="Assets\Scripts\Models\RangeWeaponChangeItem.cs" />
     <Compile Include="Assets\Scripts\ICharecteristic.cs" />
     <Compile Include="Assets\Scripts\PlayerControllers\PlayerMovementController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
