@@ -74,6 +74,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GateInteractiveItem
       objectReference: {fileID: 0}
+    - target: {fileID: 4184762327173831128, guid: 81d1fca793a05d14e86bb8429aeea53a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184762327173831128, guid: 81d1fca793a05d14e86bb8429aeea53a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184762327173831128, guid: 81d1fca793a05d14e86bb8429aeea53a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8799821331382171562, guid: 81d1fca793a05d14e86bb8429aeea53a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

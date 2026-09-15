@@ -24,6 +24,14 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2849010139011074158, guid: d9b136967f0ce7c43b35d7fa0e9cc045, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5343766601465757609, guid: a9e8d1a312892364b998a06b68b53997, type: 3}
+    - target: {fileID: 2849010139011074158, guid: d9b136967f0ce7c43b35d7fa0e9cc045, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3137490771066097853, guid: d9b136967f0ce7c43b35d7fa0e9cc045, type: 3}
       propertyPath: m_Controller
       value: 
@@ -32,6 +40,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: E-Button-Interactive-Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5837026083029963387, guid: d9b136967f0ce7c43b35d7fa0e9cc045, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 9e0df9e2ca3855747bfcda2c6990b6d8, type: 2}
     - target: {fileID: 7172782281524858933, guid: d9b136967f0ce7c43b35d7fa0e9cc045, type: 3}
       propertyPath: m_Sprite
       value: 

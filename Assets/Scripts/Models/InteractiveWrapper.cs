@@ -9,12 +9,14 @@ namespace Assets.Scripts.Models
         private bool isPlayerInRange = false;
         private BaseInteractiveItem _interactiveItem;
         private Animator animator;
+        private GameObject _buttonLable;
 
         public void Interact()
         {
             if (isPlayerInRange)
             {
                 _interactiveItem.Interact();
+                animator.SetTrigger(ButtonAnimatorConstants.Pressed);
             }
         }
 
@@ -22,6 +24,8 @@ namespace Assets.Scripts.Models
         {
             _interactiveItem = GetComponentInChildren<BaseInteractiveItem>();
             animator = GetComponent<Animator>();
+            _buttonLable = transform.Find("ButtonSprite").gameObject;
+            _buttonLable.SetActive(false);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -32,6 +36,7 @@ namespace Assets.Scripts.Models
             }
 
             isPlayerInRange = true;
+            _buttonLable.SetActive(true);
             // сообщаем игроку, что теперь именно этот объект — текущий интерактивный
             collision.GetComponent<PlayerInteractController>()?.SetInteractiveWrapper(this);
         }
@@ -44,7 +49,13 @@ namespace Assets.Scripts.Models
             }
 
             isPlayerInRange = false;
+            _buttonLable.SetActive(false);
             collision.GetComponent<PlayerInteractController>()?.SetInteractiveWrapper(null);
         }
+    }
+
+    public static class ButtonAnimatorConstants
+    {
+        public const string Pressed = "Pressed";
     }
 }
