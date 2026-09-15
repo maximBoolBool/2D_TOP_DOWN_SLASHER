@@ -8,12 +8,27 @@ namespace Assets.Scripts.Models
     {
         [SerializeField]
         private RangeWeapon _rangeWeaponPrefab;
-        private SpriteRenderer _weponSpriteRenderer;
+        private SpriteRenderer _weaponSpriteRenderer;
 
         private void Awake()
         {
-            _weponSpriteRenderer = GetComponent<SpriteRenderer>();
-            _weponSpriteRenderer.sprite = _rangeWeaponPrefab.gameObject.GetComponent<SpriteRenderer>().sprite;
+            _weaponSpriteRenderer = GetComponent<SpriteRenderer>();
+
+            if (_rangeWeaponPrefab == null)
+            {
+                Debug.LogError("_rangeWeaponPrefab не назначен!", this);
+                return;
+            }
+
+            var prefabSprite = _rangeWeaponPrefab.GetComponent<SpriteRenderer>();
+            if (prefabSprite == null)
+            {
+                Debug.LogError($"У {_rangeWeaponPrefab.name} нет SpriteRenderer на корне!", this);
+                return;
+            }
+
+            Debug.Log($"Найден спрайт: {prefabSprite.sprite?.name}, назначаю его на {gameObject.name}");
+            _weaponSpriteRenderer.sprite = prefabSprite.sprite;
         }
 
         public override void Interact()
