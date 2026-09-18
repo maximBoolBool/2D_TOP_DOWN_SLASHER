@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Enemies\BaseEnemy.cs" />
     <Compile Include="Assets\Scripts\Helpers\LineOfSightHelper.cs" />
     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Weapons\CloseCombatWeapon.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Scripts\Enums\EnemyBehaviorSateTypes.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\Helpers\UnitDirectionHelper.cs" />
+    <Compile Include="Assets\Scripts\PlayerControllers\PlayerCloseCombatWeaponController.cs" />
     <Compile Include="Assets\Scripts\UnitCharecteristic.cs" />
     <Compile Include="Assets\Scripts\Enemies\BugEnemy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />

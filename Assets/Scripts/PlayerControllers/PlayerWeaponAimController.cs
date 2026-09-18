@@ -51,7 +51,7 @@ namespace Assets.Scripts.PlayerControllers
             Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(mouseScreenPosition);
             mouseWorldPosition.z = 0f;
 
-            Vector3 aimDirection = (mouseWorldPosition - transform.position).normalized;
+            var aimDirection = (mouseWorldPosition - transform.position).normalized;
             float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
 
             transform.rotation = Quaternion.Euler(0f, 0f, angle);
