@@ -48,6 +48,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6508802084660057181, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
+      propertyPath: m_Size.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6508802084660057181, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
+      propertyPath: m_Size.y
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6508802084660057181, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6508802084660057181, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6876374156656423519, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
       propertyPath: m_Name
       value: CloseCombatWeaponPrefab
@@ -82,6 +98,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Weapons.CloseCombatWeapon
   <Title>k__BackingField: 
   <Damage>k__BackingField: 2
+  <Angle>k__BackingField: 0
+  <TargetType>k__BackingField: 0
+  <ExecutionSpeed>k__BackingField: 0
 --- !u!60 &5053497896492426116
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -119,10 +138,10 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.17, y: 0.21}
+    newSize: {x: 0.17, y: 0.21}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0

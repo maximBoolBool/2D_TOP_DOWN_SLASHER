@@ -7,6 +7,8 @@ namespace Assets.Scripts.PlayerControllers
     public class PlayerCloseCombatWeaponController : MonoBehaviour
     {
         [SerializeField]
+        private CloseCombatWeapon closeCombatWeaponPrefab;
+
         private CloseCombatWeapon? _closeCombatWeapon;
         private PlayerInput _playerInput;
         private Camera _mainCamera;
@@ -15,6 +17,8 @@ namespace Assets.Scripts.PlayerControllers
         {
             _playerInput = GetComponentInParent<PlayerInput>();
             _mainCamera = Camera.main;
+            _closeCombatWeapon = Instantiate(closeCombatWeaponPrefab, transform.position, Quaternion.identity, transform);
+            _closeCombatWeapon.gameObject.SetActive(false);
         }
 
         public void OnEnable()
@@ -36,6 +40,7 @@ namespace Assets.Scripts.PlayerControllers
                 var gameObjectPosition = transform.position;
                 mouseWorldPosition.z = gameObjectPosition.z;
 
+                _closeCombatWeapon.gameObject.SetActive(true);
                 _closeCombatWeapon.Execute(mouseWorldPosition - gameObjectPosition);
             }
         }
