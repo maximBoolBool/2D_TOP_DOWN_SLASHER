@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knife_1_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4048717308733170540, guid: 00685cb8bfd6e2948b01305594f6220e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4400525011511051630, guid: 00685cb8bfd6e2948b01305594f6220e, type: 3}
       propertyPath: m_Size.x
       value: 0.1
