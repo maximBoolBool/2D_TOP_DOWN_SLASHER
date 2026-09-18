@@ -42,7 +42,7 @@ namespace Assets.Scripts.Weapons
 
         private IEnumerator ExecuteArc(float angleFrom, float angleTo)
         {
-            float duration = 0.001f;
+            float duration = 0.05f;
             float elapsed = 0f;
 
             while (elapsed < duration)
