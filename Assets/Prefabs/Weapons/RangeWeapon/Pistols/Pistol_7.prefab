@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 2241045822426339753, guid: 1a1cb7d8ad85f56458b103f2b068bd25, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 1704145761878202281, guid: 3591246e95d91014fb443803cea29e18, type: 3}
+      objectReference: {fileID: 6893495662965793475, guid: 591bef85760e9c6409389333b9296f0c, type: 3}
     - target: {fileID: 2241045822426339753, guid: 1a1cb7d8ad85f56458b103f2b068bd25, type: 3}
       propertyPath: SubBulletsCount
       value: 1
