@@ -11,8 +11,9 @@ namespace Assets.Scripts.Enemies
     {
         [Header("Attack Settings")]
         [SerializeField] private float _attackRange = 8f;
-        [SerializeField] private float _windupTime = 0.4f;   // Телеграф/подготовка
-        [SerializeField] private float _recoveryTime = 0.6f; // Пауза после выстрела
+        [SerializeField] private float _windupTime = 0.4f;
+        [SerializeField] private float _recoveryTime = 0.6f;
+        [SerializeField] private float _preferredDistance = 4f;
 
         private EnemyMovementController _movementController;
         private EnemyAimController _aimController;
@@ -27,7 +28,8 @@ namespace Assets.Scripts.Enemies
             _weapon = GetComponentInChildren<Weapon>();
 
             ChaseState = new EnemyChaseState(this, _movementController, _attackRange);
-            AttackState = new EnemyAttackState(this, _aimController, _weapon, _windupTime, _recoveryTime);
+            //AttackState = new EnemyAttackState(this, _aimController, _weapon, _windupTime, _recoveryTime);
+            AttackState = AttackState = new EnemyMoveAndShootState( this, _movementController, _aimController, _weapon, _windupTime, _recoveryTime, _attackRange, _preferredDistance);
 
             StateMachine.Initialize(ChaseState);
         }
