@@ -280,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537796768242156441, guid: dfddba127c7d0a94dbcb200520d8476a, type: 3}
       propertyPath: m_Name
-      value: GatePair1Value1
+      value: Gate_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -391,7 +391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537796768242156441, guid: dfddba127c7d0a94dbcb200520d8476a, type: 3}
       propertyPath: m_Name
-      value: GatePair2Value1
+      value: Gates_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16644,7 +16644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537796768242156441, guid: dfddba127c7d0a94dbcb200520d8476a, type: 3}
       propertyPath: m_Name
-      value: GatePair2Value2
+      value: Gates_b
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26168,7 +26168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537796768242156441, guid: dfddba127c7d0a94dbcb200520d8476a, type: 3}
       propertyPath: m_Name
-      value: GatePair1Value2
+      value: Gate_b
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27482,7 +27482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1667730971}
   m_Layer: 0
-  m_Name: GatePair2
+  m_Name: Gates_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27662,7 +27662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861000195}
   m_Layer: 0
-  m_Name: GatePair1
+  m_Name: Gates_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32048,7 +32048,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 223275913}
-  - {fileID: 765031387}
   - {fileID: 202013789}
+  - {fileID: 765031387}
   - {fileID: 244366512}
   - {fileID: 1969794533}
