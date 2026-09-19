@@ -62,18 +62,18 @@ namespace Assets.Scripts.Weapons
             this.gameObject.SetActive(false);
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collider)
         {
-            if (collision.gameObject.CompareTag(TagConstants.BULLET))
+            if (collider.gameObject.CompareTag(TagConstants.BULLET))
             {
                 return;
             }
 
-            if ((collision.gameObject.CompareTag(TagConstants.PLAYER) && TargetType == TargetType.Player)
-                || (collision.gameObject.CompareTag(TagConstants.ENEMY) && TargetType == TargetType.Enemy)
+            if ((collider.gameObject.CompareTag(TagConstants.PLAYER) && TargetType == TargetType.Player)
+                || (collider.gameObject.CompareTag(TagConstants.ENEMY) && TargetType == TargetType.Enemy)
             )
             {
-                collision.gameObject.GetComponent<UnitCharecteristic>()?.SetDamage((int)Damage);
+                collider.gameObject.GetComponent<UnitCharecteristic>()?.SetDamage((int)Damage);
             }
         }
     }
