@@ -1,9 +1,6 @@
 ﻿using Assets.Scripts.EnemyControllers;
 using Assets.Scripts.States;
 using Assets.Scripts.Weapons;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
 
 namespace Assets.Scripts.Enemies
