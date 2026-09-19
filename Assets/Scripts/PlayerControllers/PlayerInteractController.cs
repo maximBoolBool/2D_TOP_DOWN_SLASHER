@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Models;
+﻿using Assets.Scripts.Constants;
+using Assets.Scripts.Models;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,12 +22,12 @@ namespace Assets.Scripts.PlayerControllers
 
         private void OnEnable()
         {
-            _playerInput.actions["Interact"].started += OnInteract;
+            _playerInput.actions[PlayerInputActionNames.INTERACT].started += OnInteract;
         }
 
         private void OnDisable()
         {
-            _playerInput.actions["Interact"].started -= OnInteract;
+            _playerInput.actions[PlayerInputActionNames.INTERACT].started -= OnInteract;
 
         }
 

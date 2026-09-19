@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Constants;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Assets.Scripts.PlayerControllers
@@ -27,7 +28,7 @@ namespace Assets.Scripts.PlayerControllers
         {
             if (_playerInput != null)
             {
-                _playerInput.actions["Aim"].performed += OnAimPerformed;
+                _playerInput.actions[PlayerInputActionNames.AIM].performed += OnAimPerformed;
             }
         }
 
@@ -35,7 +36,7 @@ namespace Assets.Scripts.PlayerControllers
         {
             if (_playerInput != null)
             {
-                _playerInput.actions["Aim"].performed -= OnAimPerformed;
+                _playerInput.actions[PlayerInputActionNames.AIM].performed -= OnAimPerformed;
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Constants;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -27,14 +28,14 @@ namespace Assets.Scripts.PlayerControllers
             _rb = GetComponent<Rigidbody2D>();
             _playerInput = GetComponent<PlayerInput>();
             _playerMovementController = GetComponent<PlayerMovementController>();
-            _aimAction = _playerInput.actions["Aim"];
+            _aimAction = _playerInput.actions[PlayerInputActionNames.AIM];
         }
 
         private void OnEnable()
         {
             if (_playerInput != null)
             {
-                _playerInput.actions["Dash"].started += OnDash;
+                _playerInput.actions[PlayerInputActionNames.DASH].started += OnDash;
             }
         }
 
@@ -42,7 +43,7 @@ namespace Assets.Scripts.PlayerControllers
         {
             if (_playerInput != null)
             {
-                _playerInput.actions["Dash"].started -= OnDash;
+                _playerInput.actions[PlayerInputActionNames.DASH].started -= OnDash;
             }
         }
 

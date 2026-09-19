@@ -1,4 +1,5 @@
 using Assets.Scripts;
+using Assets.Scripts.Constants;
 using Assets.Scripts.Helpers;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -26,8 +27,8 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (_playerInput != null)
         {
-            _playerInput.actions["Move"].performed += OnMove;
-            _playerInput.actions["Move"].canceled += OnMove;
+            _playerInput.actions[PlayerInputActionNames.MOVE].performed += OnMove;
+            _playerInput.actions[PlayerInputActionNames.MOVE].canceled += OnMove;
         }
     }
 
@@ -35,8 +36,8 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (_playerInput != null)
         {
-            _playerInput.actions["Move"].performed -= OnMove;
-            _playerInput.actions["Move"].canceled -= OnMove;
+            _playerInput.actions[PlayerInputActionNames.MOVE].performed -= OnMove;
+            _playerInput.actions[PlayerInputActionNames.MOVE].canceled -= OnMove;
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Weapons;
+﻿using Assets.Scripts.Constants;
+using Assets.Scripts.Weapons;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,19 +24,19 @@ namespace Assets.Scripts.PlayerControllers
 
         public void OnEnable()
         {
-            _playerInput.actions["CloseCombatAction"].performed += Execute;
+            _playerInput.actions[PlayerInputActionNames.CLOSE_COMBAT_ACTION].performed += Execute;
         }
 
         public void OnDisable()
         {
-            _playerInput.actions["CloseCombatAction"].performed -= Execute;
+            _playerInput.actions[PlayerInputActionNames.CLOSE_COMBAT_ACTION].performed -= Execute;
         }
 
         public void Execute(InputAction.CallbackContext context)
         {
             if(_closeCombatWeapon != null)
             {
-                var mouseScreenPosition = _playerInput.actions["Aim"].ReadValue<Vector2>();
+                var mouseScreenPosition = _playerInput.actions[PlayerInputActionNames.AIM].ReadValue<Vector2>();
                 var mouseWorldPosition = _mainCamera.ScreenToWorldPoint(mouseScreenPosition);
                 var gameObjectPosition = transform.position;
                 mouseWorldPosition.z = gameObjectPosition.z;

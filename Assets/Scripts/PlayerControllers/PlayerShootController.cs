@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Weapons;
+﻿using Assets.Scripts.Constants;
+using Assets.Scripts.Weapons;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -28,8 +29,8 @@ namespace Assets.Scripts.PlayerControllers
         {
             if (playerInput != null)
             {
-                playerInput.actions["Fire"].performed += OnFirePerformed;
-                playerInput.actions["Fire"].canceled += OnFireCanceled;
+                playerInput.actions[PlayerInputActionNames.FIRE].performed += OnFirePerformed;
+                playerInput.actions[PlayerInputActionNames.FIRE].canceled += OnFireCanceled;
             }
         }
 
@@ -37,8 +38,8 @@ namespace Assets.Scripts.PlayerControllers
         {
             if (playerInput != null)
             {
-                playerInput.actions["Fire"].performed -= OnFirePerformed;
-                playerInput.actions["Fire"].canceled -= OnFireCanceled;
+                playerInput.actions[PlayerInputActionNames.FIRE].performed -= OnFirePerformed;
+                playerInput.actions[PlayerInputActionNames.FIRE].canceled -= OnFireCanceled;
             }
 
             CancelInvoke(nameof(FireTick));
