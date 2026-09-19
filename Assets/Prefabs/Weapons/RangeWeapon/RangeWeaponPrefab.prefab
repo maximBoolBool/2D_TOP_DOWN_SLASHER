@@ -4951,7 +4951,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6876374156656423519, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2212656489896510703}
+      addedObject: {fileID: -1094383604341937332}
   m_SourcePrefab: {fileID: 100100000, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
 --- !u!4 &2541341542375325238 stripped
 Transform:
@@ -4963,7 +4963,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6876374156656423519, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
   m_PrefabInstance: {fileID: 3308929571331014841}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2212656489896510703
+--- !u!114 &-1094383604341937332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4982,6 +4982,7 @@ MonoBehaviour:
   <RateOfFire>k__BackingField: 1
   <MagazineRounds>k__BackingField: 1
   <DeviationAngle>k__BackingField: 0
-  SubBulletsCount: 5
+  <Type>k__BackingField: 0
+  <BulletsPerShot>k__BackingField: 1
   bulletPrefab: {fileID: 0}
   firePoint: {fileID: 0}

@@ -8,6 +8,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 1070201966351985454}
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1704145761878202281, guid: cdfc0c56db722484a8ba49f2e43e03be, type: 3}
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <Damage>k__BackingField
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <RateOfFire>k__BackingField
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <IsAutomatic>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <BulletsPerShot>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <DeviationAngle>k__BackingField
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 2541341542375325238, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -76,40 +108,10 @@ PrefabInstance:
     - {fileID: 2212656489896510703, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8252393546063426278, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3924858574685704867}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
 --- !u!4 &1070201966351985454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3789076761171952433, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
   m_PrefabInstance: {fileID: 4201750947191466015}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5244998172674366201 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8252393546063426278, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
-  m_PrefabInstance: {fileID: 4201750947191466015}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3924858574685704867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5244998172674366201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64240b95cfa17b14da55554d733d9f7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Weapons.RangeWeapon
-  <Title>k__BackingField: 
-  <Damage>k__BackingField: 5
-  <IsAutomatic>k__BackingField: 1
-  <Distance>k__BackingField: 3
-  <RateOfFire>k__BackingField: 0.4
-  <MagazineRounds>k__BackingField: 1
-  <DeviationAngle>k__BackingField: 30
-  SubBulletsCount: 4
-  bulletPrefab: {fileID: 1704145761878202281, guid: cdfc0c56db722484a8ba49f2e43e03be, type: 3}
-  firePoint: {fileID: 1070201966351985454}

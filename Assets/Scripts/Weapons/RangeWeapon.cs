@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Helpers;
+﻿using Assets.Scripts.Enums;
+using Assets.Scripts.Helpers;
 using System.Collections;
 using UnityEngine;
 
@@ -23,8 +24,11 @@ namespace Assets.Scripts.Weapons
         [field: SerializeField]
         public int DeviationAngle { get; set; }
 
-        [SerializeField]
-        public int SubBulletsCount = 5;
+        [field: SerializeField]
+        public WeaponType Type { get; set; }
+
+        [field: SerializeField]
+        public int BulletsPerShot { get; set; } = 1;
 
         [Header("Spawn Settings")]
 
@@ -48,7 +52,7 @@ namespace Assets.Scripts.Weapons
             _ = BulletCreateHelper.InitializeBullets(
                 bullet: bulletPrefab,
                 firePoint: firePoint,
-                count: SubBulletsCount,
+                count: BulletsPerShot,
                 damage: Damage,
                 distance: Distance,
                 deviationAngle: DeviationAngle

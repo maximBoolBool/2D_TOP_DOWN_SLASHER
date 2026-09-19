@@ -72,6 +72,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Scripts\Enums\EnemyBehaviorSateTypes.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\Scripts\Enums\WeaponType.cs" />
     <Compile Include="Assets\Scripts\Constants\TagConstants.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scripts\Enums\AnimationType.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyRabbit.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Enums\BulletType.cs" />
+    <Compile Include="Assets\Scripts\Models\RoomModel.cs" />
     <Compile Include="Assets\Scripts\Helpers\PlayerWeaponHelper.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\EnemyStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Models\EnemyWave.cs" />
     <Compile Include="Assets\Scripts\States\EnemyAttackState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\Gates.cs" />

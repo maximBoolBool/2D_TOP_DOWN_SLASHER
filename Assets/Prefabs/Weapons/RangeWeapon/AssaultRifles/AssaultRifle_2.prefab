@@ -52,6 +52,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5058102807552925708, guid: 948e6c74412ec20498144086ef2d53be, type: 3}
+    - target: {fileID: 7884988875885887258, guid: 64fc53985f2d12245a5e875903bcb72b, type: 3}
+      propertyPath: <Damage>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884988875885887258, guid: 64fc53985f2d12245a5e875903bcb72b, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884988875885887258, guid: 64fc53985f2d12245a5e875903bcb72b, type: 3}
+      propertyPath: <RateOfFire>k__BackingField
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884988875885887258, guid: 64fc53985f2d12245a5e875903bcb72b, type: 3}
+      propertyPath: <DeviationAngle>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8008675875122603696, guid: 64fc53985f2d12245a5e875903bcb72b, type: 3}
       propertyPath: m_Name
       value: AssaultRifle_2
