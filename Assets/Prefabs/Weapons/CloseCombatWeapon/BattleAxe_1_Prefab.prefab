@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2277787711815104790, guid: 00685cb8bfd6e2948b01305594f6220e, type: 3}
       propertyPath: <Angle>k__BackingField
-      value: 45
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2277787711815104790, guid: 00685cb8bfd6e2948b01305594f6220e, type: 3}
       propertyPath: <Damage>k__BackingField
@@ -19,6 +19,10 @@ PrefabInstance:
     - target: {fileID: 2277787711815104790, guid: 00685cb8bfd6e2948b01305594f6220e, type: 3}
       propertyPath: <TargetType>k__BackingField
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277787711815104790, guid: 00685cb8bfd6e2948b01305594f6220e, type: 3}
+      propertyPath: <ExecutionSpeed>k__BackingField
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4048717308733170540, guid: 00685cb8bfd6e2948b01305594f6220e, type: 3}
       propertyPath: m_Name

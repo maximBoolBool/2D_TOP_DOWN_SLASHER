@@ -19,7 +19,6 @@ namespace Assets.Scripts.Weapons
         private const float radius = 1f;
         private Coroutine? _executionRoutine;
 
-
         public void Execute(Vector3 direction)
         {
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -42,7 +41,7 @@ namespace Assets.Scripts.Weapons
 
         private IEnumerator ExecuteArc(float angleFrom, float angleTo)
         {
-            float duration = 0.05f;
+            float duration = 1 / ExecutionSpeed;
             float elapsed = 0f;
 
             while (elapsed < duration)
