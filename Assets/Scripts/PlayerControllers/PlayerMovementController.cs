@@ -13,6 +13,7 @@ public class PlayerMovementController : MonoBehaviour
     private Rigidbody2D _rb;
     private PlayerInput _playerInput;
     private UnitCharecteristic _unitCharecteristic;
+    private Vector2 _lastInputDirection;
 
     private void Awake()
     {
@@ -46,9 +47,25 @@ public class PlayerMovementController : MonoBehaviour
             return;
         }
 
-        var moveInput = context.ReadValue<Vector2>();
-        UnitDirectionHelper.SetDirection(gameObject, moveInput);
-        UnitAnimationHelper.SetAnimation(GetComponent<Animator>(), moveInput);
-        _rb.linearVelocity = moveInput * _moveSpeed;
+        var moveInput = context.ReadValue<Vector2>().normalized;
+        SetUnitVector(moveInput);
+        _lastInputDirection = moveInput;
+    }
+
+    private void SetUnitVector(Vector2 vector)
+    {
+        UnitDirectionHelper.SetDirection(gameObject, vector);
+        UnitAnimationHelper.SetAnimation(GetComponent<Animator>(), vector);
+        _rb.linearVelocity = vector * _moveSpeed;
+    }
+
+    public void RestoreMovement()
+    {
+        if (!_unitCharecteristic.IsAlive)
+        { 
+            return;
+        }
+
+        SetUnitVector(_lastInputDirection);
     }
 }

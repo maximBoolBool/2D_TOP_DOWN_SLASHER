@@ -15782,7 +15782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.UnitCharecteristic
   speed: 2
-  health: 10
+  health: 100
 --- !u!95 &411049779
 Animator:
   serializedVersion: 7

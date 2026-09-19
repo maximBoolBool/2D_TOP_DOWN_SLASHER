@@ -16,6 +16,7 @@ namespace Assets.Scripts.PlayerControllers
         private bool _isDashing;
         private bool _canDash = true;
         private UnitCharecteristic _unitCharecteristic;
+        private PlayerMovementController _playerMovementController;
 
         public bool IsDashing => _isDashing;
 
@@ -25,6 +26,7 @@ namespace Assets.Scripts.PlayerControllers
             _mainCamera = Camera.main;
             _rb = GetComponent<Rigidbody2D>();
             _playerInput = GetComponent<PlayerInput>();
+            _playerMovementController = GetComponent<PlayerMovementController>();
             _aimAction = _playerInput.actions["Aim"];
         }
 
@@ -80,6 +82,7 @@ namespace Assets.Scripts.PlayerControllers
             }
 
             _rb.linearVelocity = Vector2.zero;
+            _playerMovementController.RestoreMovement();
 
             _isDashing = false;
             yield return new WaitForSeconds(dashCooldown);
