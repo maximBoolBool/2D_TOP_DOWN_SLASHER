@@ -40,7 +40,6 @@ namespace Assets.Scripts.States
             switch (_currentPhase)
             {
                 case Phase.Windup:
-                    // Замах/подготовка: целится в игрока
                     _aim.AimAt(_enemy.Player.transform.position, _weapon.transform);
                     if (_timer >= _windupTime)
                     {
@@ -50,14 +49,12 @@ namespace Assets.Scripts.States
                     break;
 
                 case Phase.Shoot:
-                    // Выстрел
                     _weapon.Execute();
                     _currentPhase = Phase.Recovery;
                     _timer = 0f;
                     break;
 
                 case Phase.Recovery:
-                    // Задержка после выстрела перед движением
                     if (_timer >= _recoveryTime)
                     {
                         _enemy.StateMachine.ChangeState(_enemy.ChaseState);

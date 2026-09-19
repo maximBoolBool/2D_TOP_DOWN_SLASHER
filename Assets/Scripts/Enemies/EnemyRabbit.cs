@@ -26,7 +26,6 @@ namespace Assets.Scripts.Enemies
             _aimController = GetComponent<EnemyAimController>();
             _weapon = GetComponentInChildren<Weapon>();
 
-            // Инициализируем состояния
             ChaseState = new EnemyChaseState(this, _movementController, _attackRange);
             AttackState = new EnemyAttackState(this, _aimController, _weapon, _windupTime, _recoveryTime);
 
