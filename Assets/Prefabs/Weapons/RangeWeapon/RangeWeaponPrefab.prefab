@@ -4948,10 +4948,40 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1058070222436695695, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6543376246818526401}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6876374156656423519, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2212656489896510703}
   m_SourcePrefab: {fileID: 100100000, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
 --- !u!4 &2541341542375325238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1058070222436695695, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
   m_PrefabInstance: {fileID: 3308929571331014841}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8252393546063426278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6876374156656423519, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
+  m_PrefabInstance: {fileID: 3308929571331014841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2212656489896510703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8252393546063426278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64240b95cfa17b14da55554d733d9f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Weapons.RangeWeapon
+  <Title>k__BackingField: 
+  <Damage>k__BackingField: 0
+  <IsAutomatic>k__BackingField: 0
+  <Distance>k__BackingField: 0
+  <RateOfFire>k__BackingField: 1
+  <MagazineRounds>k__BackingField: 1
+  <DeviationAngle>k__BackingField: 0
+  SubBulletsCount: 5
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
