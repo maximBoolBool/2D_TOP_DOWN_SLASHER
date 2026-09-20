@@ -17,12 +17,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 157074584526547586, guid: f666ed51b1b06cf42b8570dfa994a169, type: 3}
     - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: <Damage>k__BackingField
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <Distance>k__BackingField
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: <RateOfFire>k__BackingField
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <IsAutomatic>k__BackingField
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: <DeviationAngle>k__BackingField

@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Enums;
 using Assets.Scripts.Helpers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,11 +46,23 @@ namespace Assets.Scripts
             var resultHealthPoints = Mathf.Max(currentHealth - damage, 0);
             ActualCharacteristics[CharecteristicType.Health] = resultHealthPoints;
 
+            var animator = GetComponent<Animator>();
             if (resultHealthPoints == 0)
             {
-                UnitAnimationHelper.SetDeadAnimation(GetComponent<Animator>());
+                UnitAnimationHelper.SetDeadAnimation(animator);
                 SetStatus(UnitStatusType.Dead);
             }
+            else
+            {
+                UnitAnimationHelper.SetDamagedAnimation(animator);
+                StartCoroutine(ResetLayerWeight(animator, animator.GetLayerIndex(UnitAnimationHelper.HitLayer), 0.25f));
+            }
+        }
+
+        private IEnumerator ResetLayerWeight(Animator animator, int layerIndex, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            animator.SetLayerWeight(layerIndex, 0f);
         }
     }
 }

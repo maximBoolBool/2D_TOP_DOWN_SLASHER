@@ -126,6 +126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyRabbitAssaultRfle_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4665700741027830960, guid: 5401903567a0ebd46b8eadd67680acc2, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7011859533864060344, guid: 5401903567a0ebd46b8eadd67680acc2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -236,3 +240,4 @@ MonoBehaviour:
   _attackRange: 8
   _windupTime: 0.4
   _recoveryTime: 0.6
+  _preferredDistance: 4

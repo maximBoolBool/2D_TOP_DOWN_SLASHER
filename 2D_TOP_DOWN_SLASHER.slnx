@@ -1,3 +1,23 @@
 ﻿<Solution>
+  <Project Path="MCPForUnity.Runtime.csproj" />
+  <Project Path="Zenject.csproj" />
+  <Project Path="Zenject-IntegrationTests-Editor.csproj" />
+  <Project Path="Zenject-ReflectionBaking-Editor.csproj" />
+  <Project Path="MCPForUnity.Editor.csproj" />
+  <Project Path="UniTask.csproj" />
+  <Project Path="Zenject-UnitTests-Editor.csproj" />
+  <Project Path="Zenject-Editor.csproj" />
+  <Project Path="Zenject-IntegrationTests.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="UniTask.Linq.csproj" />
+  <Project Path="Zenject-TestFramework.csproj" />
+  <Project Path="UniTask.TextMeshPro.csproj" />
+  <Project Path="Zenject-PoolMonitor-Editor.csproj" />
+  <Project Path="UniTask.Editor.csproj" />
+  <Project Path="Slasher.Ui.csproj" />
+  <Project Path="Slasher,Gamplay.csproj" />
+  <Project Path="UniTask.Addressables.csproj" />
+  <Project Path="Slasher.Main.csproj" />
+  <Project Path="UniTask.DOTween.csproj" />
+  <Project Path="Slasher.Core.csproj" />
 </Solution>
