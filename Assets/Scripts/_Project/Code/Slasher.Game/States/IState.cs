@@ -1,0 +1,10 @@
+﻿namespace Assets.Scripts._Project.Code.Slasher.Game.States
+{
+    public interface IState
+    {
+        void Enter();
+        void Exit();
+        void LogicUpdate();
+        void PhysicsUpdate();
+    }
+}

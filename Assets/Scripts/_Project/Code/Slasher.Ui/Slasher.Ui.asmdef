@@ -1,3 +1,18 @@
 {
-	"name": "Slasher.Ui"
+    "name": "Slasher.Ui",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fc1320a3ef2d5434888e2ea5d30a1339",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:882dc829c9aa26945ab687fbc0f5e007"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

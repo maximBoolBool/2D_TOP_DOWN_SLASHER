@@ -63,8 +63,8 @@
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Bindings\TestDiContainerMethods\Gorp.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromNewScriptableObjectResource\Bob.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Installers\TestInstallers\FooInstaller.cs" />
-    <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromSubContainerPrefab\Bar.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Installers\TestScriptableObjectInstallers\QuxInstaller.cs" />
+    <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromSubContainerPrefab\Bar.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefabInstaller\Foo.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Bindings\TestInstantiateCallback\Foo.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Bindings\TestFromPrefab\Gorp.cs" />

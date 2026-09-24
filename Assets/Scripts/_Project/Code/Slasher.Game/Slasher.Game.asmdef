@@ -1,0 +1,16 @@
+{
+    "name": "Slasher.Game",
+    "rootNamespace": "",
+    "references": [
+        "GUID:882dc829c9aa26945ab687fbc0f5e007"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -79,8 +79,8 @@
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Setup\SetupWindowService.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\ServerManagementService.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Clients\Configurators\QwenCodeConfigurator.cs" />
-    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Profiler\Operations\FrameTimingOps.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Cameras\CameraControl.cs" />
+    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Profiler\Operations\FrameTimingOps.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Vfx\ManageVFX.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\ManageMaterial.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Clients\Configurators\CopilotCliConfigurator.cs" />
@@ -90,8 +90,8 @@
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\Server\IPidFileManager.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\EditorStateCache.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\Server\IProcessTerminator.cs" />
-    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Helpers\RenderPipelineUtility.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Physics\PhysicsForceOps.cs" />
+    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Helpers\RenderPipelineUtility.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Vfx\ParticleControl.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Dependencies\PlatformDetectors\PlatformDetectorBase.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Dependencies\PlatformDetectors\IPlatformDetector.cs" />
@@ -136,8 +136,8 @@
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Helpers\EditorWindowScreenshotUtility.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\AssetGen\GenerateModel.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Windows\Components\Tools\McpToolsSection.cs" />
-    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\AssetGen\AssetGenJobManager.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\RefreshUnity.cs" />
+    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\AssetGen\AssetGenJobManager.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\ProBuilder\ManageProBuilder.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\GameObjects\GameObjectComponentHelpers.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Profiler\Operations\SessionOps.cs" />
@@ -190,8 +190,8 @@
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\AssetGen\Providers\TripoAdapter.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\AssetGen\Providers\FalAudioAdapter.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Resources\Project\ProjectInfo.cs" />
-    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Helpers\ParamCoercion.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Graphics\GraphicsHelpers.cs" />
+    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Helpers\ParamCoercion.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\ToolDiscoveryService.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Vfx\VfxGraphRead.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\Transport\IMcpTransportClient.cs" />
@@ -214,8 +214,8 @@
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\ManageEditor.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Cameras\CameraConfigure.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\PackageUpdateService.cs" />
-    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Physics\JointOps.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Helpers\ConfigJsonBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Physics\JointOps.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Animation\AnimatorControl.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Helpers\AssetGenPrefs.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\MCPServiceLocator.cs" />
@@ -227,8 +227,8 @@
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Vfx\TrailRead.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\ExecuteCode.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Profiler\Operations\CounterOps.cs" />
-    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Clients\Configurators\AntigravityIdeConfigurator.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Cameras\CameraHelpers.cs" />
+    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Clients\Configurators\AntigravityIdeConfigurator.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\IPackageUpdateService.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Constants\AuthConstants.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\ITestRunnerService.cs" />
@@ -285,8 +285,8 @@
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Vfx\VfxGraphCommon.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Windows\Components\Advanced\McpAdvancedSection.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Physics\PhysicsQueryOps.cs" />
-    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Clients\Configurators\GeminiCliConfigurator.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\IResourceDiscoveryService.cs" />
+    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Clients\Configurators\GeminiCliConfigurator.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\AssetGen\Providers\OpenRouterAdapter.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Vfx\ManageVfxCommon.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Physics\PhysicsSimulationOps.cs" />
@@ -339,8 +339,8 @@
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\AssetGen\Import\ModelImportPipeline.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\ProBuilder\ProBuilderMeshUtils.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\ManageAsset.cs" />
-    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\AssetGen\Providers\LocalImage.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\TestRunnerNoThrottle.cs" />
+    <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\AssetGen\Providers\LocalImage.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Tools\Physics\CollisionMatrixOps.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\PackageDeploymentService.cs" />
     <Compile Include="Library\PackageCache\com.coplaydev.unity-mcp@045e809812a8\Editor\Services\AssetGen\Providers\SketchfabAdapter.cs" />

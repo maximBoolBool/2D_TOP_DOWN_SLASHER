@@ -9,15 +9,15 @@
   <Project Path="Zenject-Editor.csproj" />
   <Project Path="Zenject-IntegrationTests.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Slasher.Editor.csproj" />
   <Project Path="UniTask.Linq.csproj" />
+  <Project Path="Slasher.Ui.csproj" />
+  <Project Path="Slasher.Game.csproj" />
   <Project Path="Zenject-TestFramework.csproj" />
   <Project Path="UniTask.TextMeshPro.csproj" />
   <Project Path="Zenject-PoolMonitor-Editor.csproj" />
-  <Project Path="UniTask.Editor.csproj" />
-  <Project Path="Slasher.Ui.csproj" />
-  <Project Path="Slasher,Gamplay.csproj" />
-  <Project Path="UniTask.Addressables.csproj" />
-  <Project Path="Slasher.Main.csproj" />
-  <Project Path="UniTask.DOTween.csproj" />
   <Project Path="Slasher.Core.csproj" />
+  <Project Path="UniTask.Editor.csproj" />
+  <Project Path="UniTask.Addressables.csproj" />
+  <Project Path="UniTask.DOTween.csproj" />
 </Solution>

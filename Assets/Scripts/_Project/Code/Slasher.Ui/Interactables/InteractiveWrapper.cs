@@ -1,0 +1,62 @@
+using UnityEngine;
+using Assets.Scripts._Project.Code.Slasher.Core;
+using Assets.Scripts._Project.Code.Slasher.Game.Interactables;
+using Assets.Scripts._Project.Code.Slasher.Ui.PlayerControllers;
+
+namespace Assets.Scripts._Project.Code.Slasher.Ui.Interactables
+{
+    public class InteractiveWrapper : MonoBehaviour
+    {
+        private bool isPlayerInRange = false;
+        private BaseInteractiveItem _interactiveItem;
+        private Animator animator;
+        private GameObject _buttonLable;
+
+        public void Interact()
+        {
+            if (isPlayerInRange)
+            {
+                _interactiveItem.Interact();
+                animator.SetTrigger(ButtonAnimatorConstants.Pressed);
+            }
+        }
+
+        private void Awake()
+        {
+            _interactiveItem = GetComponentInChildren<BaseInteractiveItem>();
+            _buttonLable = transform.Find("ButtonSprite").gameObject;
+            animator = _buttonLable.GetComponent<Animator>();
+            _buttonLable.SetActive(false);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (!collision.gameObject.CompareTag(TagConstants.PLAYER))
+            {
+                return;
+            }
+
+            isPlayerInRange = true;
+            _buttonLable.SetActive(true);
+            // сообщаем игроку, что теперь именно этот объект — текущий интерактивный
+            collision.GetComponent<PlayerInteractController>()?.SetInteractiveWrapper(this);
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (!collision.gameObject.CompareTag(TagConstants.PLAYER))
+            { 
+                return;
+            }
+
+            isPlayerInRange = false;
+            _buttonLable.SetActive(false);
+            collision.GetComponent<PlayerInteractController>()?.SetInteractiveWrapper(null);
+        }
+    }
+
+    public static class ButtonAnimatorConstants
+    {
+        public const string Pressed = "Pressed";
+    }
+}

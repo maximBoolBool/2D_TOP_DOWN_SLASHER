@@ -1,0 +1,72 @@
+using Assets.Scripts._Project.Code.Slasher.Game.Helpers;
+using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
+using Assets.Scripts._Project.Code.Slasher.Ui;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+[RequireComponent(typeof(Rigidbody2D))]
+public class PlayerMovementController : MonoBehaviour
+{
+    [Header("Settings")]
+    [SerializeField] private float _moveSpeed = 3f;
+
+    [Header("References")]
+    private Rigidbody2D _rb;
+    private PlayerInput _playerInput;
+    private UnitCharecteristic _unitCharecteristic;
+    private Vector2 _lastInputDirection;
+
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        _playerInput = GetComponent<PlayerInput>();
+        _unitCharecteristic = GetComponent<UnitCharecteristic>();
+    }
+
+    private void OnEnable()
+    {
+        if (_playerInput != null)
+        {
+            _playerInput.actions[PlayerInputActionNames.MOVE].performed += OnMove;
+            _playerInput.actions[PlayerInputActionNames.MOVE].canceled += OnMove;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (_playerInput != null)
+        {
+            _playerInput.actions[PlayerInputActionNames.MOVE].performed -= OnMove;
+            _playerInput.actions[PlayerInputActionNames.MOVE].canceled -= OnMove;
+        }
+    }
+
+    private void OnMove(InputAction.CallbackContext context)
+    {
+        if(!_unitCharecteristic.IsAlive)
+        {
+            return;
+        }
+
+        var moveInput = context.ReadValue<Vector2>().normalized;
+        SetUnitVector(moveInput);
+        _lastInputDirection = moveInput;
+    }
+
+    private void SetUnitVector(Vector2 vector)
+    {
+        UnitDirectionHelper.SetDirection(gameObject, vector);
+        UnitAnimationHelper.SetAnimation(GetComponent<Animator>(), vector);
+        _rb.linearVelocity = vector * _moveSpeed;
+    }
+
+    public void RestoreMovement()
+    {
+        if (!_unitCharecteristic.IsAlive)
+        { 
+            return;
+        }
+
+        SetUnitVector(_lastInputDirection);
+    }
+}

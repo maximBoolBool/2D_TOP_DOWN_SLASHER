@@ -53,8 +53,8 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.5.0f1\Editor\Data\BCLExtensions\TargetingPacks\netstandard2.1\analyzers\dotnet\roslyn4.0\cs\System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Tests\Factories\TestBindFactoryFive\TestBindFactoryFive.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Tests\Misc\TestMonoKernelDecoration\DelayedInitializeKernel.cs" />
+    <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Tests\Factories\TestBindFactoryFive\TestBindFactoryFive.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Tests\Bindings\TestFromComponent\TestFromNewComponentOn.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Tests\Bindings\TestFromGameObject\TestFromGameObject.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\IntegrationTests\Tests\Bindings\TestFromPrefab\TestFromPrefab.cs" />
