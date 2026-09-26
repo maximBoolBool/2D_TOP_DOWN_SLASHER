@@ -2,7 +2,7 @@
 
 namespace Assets.Scripts._Project.Code.Slasher.Main.Installers
 {
-    public class CoreInstaller : MonoInstaller
+    public class RootInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {
