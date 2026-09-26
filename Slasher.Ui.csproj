@@ -62,6 +62,8 @@
     <Compile Include="Assets\Scripts\_Project\Code\Slasher.Ui\Helpers\PlayerWeaponHelper.cs" />
     <Compile Include="Assets\Scripts\_Project\Code\Slasher.Ui\PlayerControllers\PlayerMovementController.cs" />
     <Compile Include="Assets\Scripts\_Project\Code\Slasher.Ui\PlayerControllers\PlayerWeaponAimController.cs" />
+    <Compile Include="Assets\Scripts\_Project\Code\Slasher.Ui\MonoBehaviours\GameButtonsBehaviour.cs" />
+    <Compile Include="Assets\Scripts\_Project\Code\Slasher.Ui\MonoBehaviours\MainMenuButtonBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\_Project\Code\Slasher.Ui\Slasher.Ui.asmdef" />
@@ -1279,6 +1281,8 @@
   <ItemGroup>
     <ProjectReference Include="Slasher.Game.csproj" />
     <ProjectReference Include="Slasher.Core.csproj" />
+    <ProjectReference Include="UniTask.csproj" />
+    <ProjectReference Include="Zenject.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

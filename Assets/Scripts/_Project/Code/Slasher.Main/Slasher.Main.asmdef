@@ -1,6 +1,18 @@
 {
-	"name": "Slasher.Main",
-	"references": [
-		"Zenject"
-	]
+    "name": "Slasher.Main",
+    "rootNamespace": "",
+    "references": [
+        "Zenject",
+        "Slasher.Game",
+        "Slasher.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

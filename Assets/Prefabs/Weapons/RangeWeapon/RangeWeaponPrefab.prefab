@@ -4951,7 +4951,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6876374156656423519, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -1094383604341937332}
+      addedObject: {fileID: -4492271545245659672}
   m_SourcePrefab: {fileID: 100100000, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
 --- !u!4 &2541341542375325238 stripped
 Transform:
@@ -4963,7 +4963,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6876374156656423519, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
   m_PrefabInstance: {fileID: 3308929571331014841}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-1094383604341937332
+--- !u!114 &-4492271545245659672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4972,9 +4972,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8252393546063426278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64240b95cfa17b14da55554d733d9f7b, type: 3}
+  m_Script: {fileID: 11500000, guid: e9739cc0391ce01408642c915c285815, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Weapons.RangeWeapon
+  m_EditorClassIdentifier: Slasher.Game::Assets.Scripts._Project.Code.Slasher.Game.Weapons.RangeWeapon
   <Title>k__BackingField: 
   <Damage>k__BackingField: 0
   <IsAutomatic>k__BackingField: 0

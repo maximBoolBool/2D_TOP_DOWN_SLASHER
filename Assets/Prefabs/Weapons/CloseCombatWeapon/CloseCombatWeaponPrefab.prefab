@@ -74,33 +74,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6876374156656423519, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2277787711815104790}
+      addedObject: {fileID: 5053497896492426116}
     - targetCorrespondingSourceObject: {fileID: 6876374156656423519, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5053497896492426116}
+      addedObject: {fileID: 1145752103499015706}
   m_SourcePrefab: {fileID: 100100000, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
 --- !u!1 &4048717308733170540 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6876374156656423519, guid: 97f3d1b4031804d4f8f718270fe5b9e4, type: 3}
   m_PrefabInstance: {fileID: 7440552604589527347}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2277787711815104790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4048717308733170540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72361ec3c977c854187f62bdc346b403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Weapons.CloseCombatWeapon
-  <Title>k__BackingField: 
-  <Damage>k__BackingField: 2
-  <Angle>k__BackingField: 0
-  <TargetType>k__BackingField: 0
-  <ExecutionSpeed>k__BackingField: 0
 --- !u!60 &5053497896492426116
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -153,3 +136,20 @@ PolygonCollider2D:
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
   m_UseDelaunayMesh: 1
+--- !u!114 &1145752103499015706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4048717308733170540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c09317fd7303e047be177dcf0a39d16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Slasher.Game::Assets.Scripts._Project.Code.Slasher.Game.Weapons.CloseCombatWeapon
+  <Title>k__BackingField: 
+  <Damage>k__BackingField: 2
+  <Angle>k__BackingField: 15
+  <TargetType>k__BackingField: 1
+  <ExecutionSpeed>k__BackingField: 1
