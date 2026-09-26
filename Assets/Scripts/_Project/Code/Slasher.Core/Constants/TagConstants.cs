@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts._Project.Code.Slasher.Core
+﻿namespace Assets.Scripts._Project.Code.Slasher.Core.Constants
 {
     public static class TagConstants
     {

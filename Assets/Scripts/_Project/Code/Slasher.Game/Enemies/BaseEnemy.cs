@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-using Assets.Scripts._Project.Code.Slasher.Core;
 using Assets.Scripts._Project.Code.Slasher.Game.States;
 using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
 using Assets.Scripts._Project.Code.Slasher.Game.StateMachines;
+using Assets.Scripts._Project.Code.Slasher.Core.Constants;
 
 namespace Assets.Scripts._Project.Code.Slasher.Game.Enemies
 {

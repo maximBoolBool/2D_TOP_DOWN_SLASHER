@@ -1,4 +1,4 @@
-using Assets.Scripts._Project.Code.Slasher.Core;
+using Assets.Scripts._Project.Code.Slasher.Core.Constants;
 using UnityEngine;
 
 namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables

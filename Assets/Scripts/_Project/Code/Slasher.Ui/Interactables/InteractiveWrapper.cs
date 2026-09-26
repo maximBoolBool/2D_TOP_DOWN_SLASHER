@@ -1,7 +1,7 @@
 using UnityEngine;
-using Assets.Scripts._Project.Code.Slasher.Core;
 using Assets.Scripts._Project.Code.Slasher.Game.Interactables;
 using Assets.Scripts._Project.Code.Slasher.Ui.PlayerControllers;
+using Assets.Scripts._Project.Code.Slasher.Core.Constants;
 
 namespace Assets.Scripts._Project.Code.Slasher.Ui.Interactables
 {

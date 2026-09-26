@@ -1590,6 +1590,7 @@
     <ProjectReference Include="MCPForUnity.Editor.csproj" />
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj" />
     <ProjectReference Include="Slasher.Game.csproj" />
+    <ProjectReference Include="Slasher.Main.csproj" />
     <ProjectReference Include="UniTask.Linq.csproj" />
     <ProjectReference Include="UniTask.Addressables.csproj" />
     <ProjectReference Include="UniTask.csproj" />

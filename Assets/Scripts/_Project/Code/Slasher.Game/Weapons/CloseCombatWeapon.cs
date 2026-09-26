@@ -1,4 +1,4 @@
-﻿using Assets.Scripts._Project.Code.Slasher.Core;
+﻿using Assets.Scripts._Project.Code.Slasher.Core.Constants;
 using Assets.Scripts._Project.Code.Slasher.Game.Enums;
 using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
 using System.Collections;
