@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\_Project\Code\Slasher.Core\TagConstants.cs" />
+    <Compile Include="Assets\Scripts\_Project\Code\Slasher.Core\Enums\GameStateType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\_Project\Code\Slasher.Core\Slasher.Core.asmdef" />
