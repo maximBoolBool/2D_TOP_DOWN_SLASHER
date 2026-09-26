@@ -1,3 +1,6 @@
 {
-	"name": "Slasher.Main"
+	"name": "Slasher.Main",
+	"references": [
+		"Zenject"
+	]
 }

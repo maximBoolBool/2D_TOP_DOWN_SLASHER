@@ -18,6 +18,7 @@
   <Project Path="Zenject-PoolMonitor-Editor.csproj" />
   <Project Path="Slasher.Core.csproj" />
   <Project Path="UniTask.Editor.csproj" />
+  <Project Path="Slasher.Main.csproj" />
   <Project Path="UniTask.Addressables.csproj" />
   <Project Path="UniTask.DOTween.csproj" />
 </Solution>
