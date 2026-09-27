@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3440191029111533038}
   - component: {fileID: 3808227415220134214}
   - component: {fileID: 2009749329355607058}
-  - component: {fileID: 1704145761878202281}
+  - component: {fileID: 7235693118660796798}
   m_Layer: 0
   m_Name: BaseEnemyBulletPrefab
   m_TagString: Bullet
@@ -158,7 +158,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1704145761878202281
+--- !u!114 &7235693118660796798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5367577927012957700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81549b248a8500c48bd89c9a2ce27eed, type: 3}
+  m_Script: {fileID: 11500000, guid: 25d7fed9276ab8a4bb20eec35d5cfddc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Bullet
-  speed: 15
+  m_EditorClassIdentifier: Slasher.Game::Assets.Scripts._Project.Code.Slasher.Game.Bullet
+  speed: 10
   _targetType: 0
