@@ -4985,4 +4985,4 @@ MonoBehaviour:
   <Type>k__BackingField: 0
   <BulletsPerShot>k__BackingField: 1
   bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 3789076761171952433}
