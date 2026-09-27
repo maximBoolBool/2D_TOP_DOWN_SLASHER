@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7069279563363843238}
   - component: {fileID: 9012697124804155886}
   - component: {fileID: 1981730020160214254}
-  - component: {fileID: 4994502857098741007}
   m_Layer: 8
   m_Name: AimShootUnitPart
   m_TagString: Untagged
@@ -59,19 +58,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8e56ee03e84ee48a01418bd40d3fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PlayerWeaponAiming
---- !u!114 &4994502857098741007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770395950645056038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6bbb4d8078f1d94aac0a4b91e4a4166, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PlayerControllers.PlayerCloseCombatWeaponController
-  closeCombatWeaponPrefab: {fileID: 1036596912218158231, guid: 67b8191de89246448a62bb6a0eada507, type: 3}
 --- !u!1 &3218730049033437343
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,10 +72,10 @@ GameObject:
   - component: {fileID: 3708349966241873881}
   - component: {fileID: 475677810687827484}
   - component: {fileID: 5998807447747573073}
-  - component: {fileID: 9166333357191045083}
   - component: {fileID: 6043866961605806954}
   - component: {fileID: 110228039952637309}
   - component: {fileID: 3395438975470926800}
+  - component: {fileID: 1545283991668126133}
   m_Layer: 8
   m_Name: PlayerUnitPrefab
   m_TagString: Player
@@ -235,20 +221,6 @@ MonoBehaviour:
   dashDistance: 4
   dashDuration: 0.5
   dashCooldown: 1.5
---- !u!114 &9166333357191045083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3218730049033437343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20dc737faa6fa824ca79032de95c130e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.UnitCharecteristic
-  speed: 2
-  health: 100
 --- !u!114 &6043866961605806954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +315,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1545283991668126133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218730049033437343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ce103f9880c2348bef00cff319207e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Slasher.Game::Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic.UnitCharecteristic
+  speed: 3
+  health: 100
 --- !u!1001 &7657585628444267748
 PrefabInstance:
   m_ObjectHideFlags: 0
