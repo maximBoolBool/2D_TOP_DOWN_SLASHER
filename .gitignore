@@ -371,3 +371,40 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# ---- Unity: IDE-файлы генерируются Unity автоматически ----
+/*.csproj
+/*.unityproj
+/*.sln
+/*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+.idea/
+.consulo/
+ExportedObj/
+
+# ---- Unity: прочее ----
+sysinfo.txt
+crashlytics-buildtime-*
+*.apk
+*.aab
+*.unitypackage
+*.app
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Unity-файлы, которые всегда должны быть в репозитории
+!/[Pp]ackages/manifest.json
+!/[Pp]ackages/packages-lock.json
