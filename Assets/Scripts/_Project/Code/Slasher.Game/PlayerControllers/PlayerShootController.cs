@@ -1,10 +1,10 @@
-using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
+﻿using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
 using Assets.Scripts._Project.Code.Slasher.Game.Weapons;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Assets.Scripts._Project.Code.Slasher.Ui.PlayerControllers
+namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
 {
     public class PlayerShootController : MonoBehaviour
     {

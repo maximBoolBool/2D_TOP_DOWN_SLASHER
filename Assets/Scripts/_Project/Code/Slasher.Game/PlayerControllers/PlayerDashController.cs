@@ -1,9 +1,9 @@
-using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
+﻿using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Assets.Scripts._Project.Code.Slasher.Ui.PlayerControllers
+namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
 {
     public class PlayerDashController : MonoBehaviour
     {

@@ -1,6 +1,7 @@
 using UnityEngine;
 using Assets.Scripts._Project.Code.Slasher.Game.Weapons;
 using Assets.Scripts._Project.Code.Slasher.Core.Constants;
+using Assets.Scripts._Project.Code.Slasher.Game.Helpers;
 
 namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
 {
@@ -36,7 +37,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
             var player = GameObject.FindGameObjectWithTag(TagConstants.PLAYER);
             var aimPart = player.transform.Find("AimShootUnitPart");         
 
-            //PlayerWeaponHelper.ChangeWeapon(aimPart.gameObject, _rangeWeaponPrefab);
+            PlayerWeaponHelper.ChangeWeapon(aimPart.gameObject, _rangeWeaponPrefab);
 
             Destroy(gameObject.transform.parent.gameObject);
         }

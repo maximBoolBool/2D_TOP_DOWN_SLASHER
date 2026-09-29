@@ -1,8 +1,8 @@
-using Assets.Scripts._Project.Code.Slasher.Ui.Interactables;
+﻿using Assets.Scripts._Project.Code.Slasher.Game.Interactables;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Assets.Scripts._Project.Code.Slasher.Ui.PlayerControllers
+namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
 {
     public class PlayerInteractController : MonoBehaviour
     {

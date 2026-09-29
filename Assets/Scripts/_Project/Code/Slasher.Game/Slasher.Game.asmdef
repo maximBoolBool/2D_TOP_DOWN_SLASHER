@@ -2,7 +2,8 @@
     "name": "Slasher.Game",
     "rootNamespace": "",
     "references": [
-        "GUID:882dc829c9aa26945ab687fbc0f5e007"
+        "GUID:882dc829c9aa26945ab687fbc0f5e007",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

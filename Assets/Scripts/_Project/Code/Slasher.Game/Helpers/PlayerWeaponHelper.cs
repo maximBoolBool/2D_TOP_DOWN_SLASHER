@@ -1,8 +1,8 @@
+using Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers;
 using Assets.Scripts._Project.Code.Slasher.Game.Weapons;
-using Assets.Scripts._Project.Code.Slasher.Ui.PlayerControllers;
 using UnityEngine;
 
-namespace Assets.Scripts._Project.Code.Slasher.UI.Helpers
+namespace Assets.Scripts._Project.Code.Slasher.Game.Helpers
 {
     public static class PlayerWeaponHelper
     {

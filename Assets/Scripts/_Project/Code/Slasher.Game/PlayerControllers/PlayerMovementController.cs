@@ -1,6 +1,6 @@
+﻿using Assets.Scripts._Project.Code.Slasher.Game;
 using Assets.Scripts._Project.Code.Slasher.Game.Helpers;
 using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
-using Assets.Scripts._Project.Code.Slasher.Ui;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

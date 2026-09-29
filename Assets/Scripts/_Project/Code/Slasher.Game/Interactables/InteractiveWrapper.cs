@@ -1,9 +1,8 @@
-using UnityEngine;
-using Assets.Scripts._Project.Code.Slasher.Game.Interactables;
-using Assets.Scripts._Project.Code.Slasher.Ui.PlayerControllers;
+﻿using UnityEngine;
 using Assets.Scripts._Project.Code.Slasher.Core.Constants;
+using Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers;
 
-namespace Assets.Scripts._Project.Code.Slasher.Ui.Interactables
+namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
 {
     public class InteractiveWrapper : MonoBehaviour
     {
