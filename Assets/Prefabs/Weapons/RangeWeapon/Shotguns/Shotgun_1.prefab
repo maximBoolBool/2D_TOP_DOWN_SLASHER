@@ -17,6 +17,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4492271545245659672, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <AmmoIcon>k__BackingField
+      value: 
+      objectReference: {fileID: -2167234949884197432, guid: 6dbd92e104ac6a549a0094b43c698cbb, type: 3}
+    - target: {fileID: -4492271545245659672, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: <Distance>k__BackingField
       value: 15
       objectReference: {fileID: 0}

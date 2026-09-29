@@ -1,6 +1,6 @@
-﻿using Assets.Scripts._Project.Code.Slasher.Game;
-using Assets.Scripts._Project.Code.Slasher.Game.Enums;
+﻿using Assets.Scripts._Project.Code.Slasher.Game.Enums;
 using Assets.Scripts._Project.Code.Slasher.Game.Helpers;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -31,6 +31,20 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Weapons
         [field: SerializeField]
         public int BulletsPerShot { get; set; } = 1;
 
+        [Header("Ammo")]
+
+        [field: SerializeField]
+        public int MaxAmmo { get; set; } = 60;
+
+        [field: SerializeField]
+        public bool IsInfiniteAmmo { get; set; }
+
+        [field: SerializeField]
+        public float ReloadTime { get; set; } = 1f;
+
+        [field: SerializeField]
+        public Sprite AmmoIcon { get; set; }
+
         [Header("Spawn Settings")]
 
         [field: SerializeField]
@@ -43,6 +57,22 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Weapons
 
         private ParticleSystem _shellParticleSystem;
 
+        // патроны в магазине и в запасе этого конкретного ствола
+        public int AmmoInMagazine { get; private set; }
+        public int AmmoInReserve { get; private set; }
+        public bool IsReloading { get; private set; }
+
+        public bool CanShoot => mayFire && !IsReloading && AmmoInMagazine > 0;
+        public bool CanReload => !IsReloading
+            && AmmoInMagazine < MagazineRounds
+            && (IsInfiniteAmmo || AmmoInReserve > 0);
+
+        // вызываются после любого изменения патронов / в начале перезарядки
+        public event Action AmmoChanged;
+        public event Action<float> ReloadStarted;
+
+        // Execute стреляет без учёта патронов (так стреляют враги),
+        // TryShoot учитывает магазин и перезарядку (так стреляет игрок)
         public override void Execute()
         {
             if (!mayFire)
@@ -64,6 +94,49 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Weapons
             StartCoroutine(ResetFireCooldown());
         }
 
+        public bool TryShoot()
+        {
+            if (!CanShoot)
+            {
+                return false;
+            }
+
+            Execute();
+            AmmoInMagazine--;
+            AmmoChanged?.Invoke();
+            return true;
+        }
+
+        public void Reload()
+        {
+            if (!CanReload)
+            {
+                return;
+            }
+
+            StartCoroutine(ReloadRoutine());
+        }
+
+        private IEnumerator ReloadRoutine()
+        {
+            IsReloading = true;
+            ReloadStarted?.Invoke(ReloadTime);
+
+            yield return new WaitForSeconds(ReloadTime);
+
+            int needed = MagazineRounds - AmmoInMagazine;
+            int loaded = IsInfiniteAmmo ? needed : Mathf.Min(needed, AmmoInReserve);
+
+            AmmoInMagazine += loaded;
+            if (!IsInfiniteAmmo)
+            {
+                AmmoInReserve -= loaded;
+            }
+
+            IsReloading = false;
+            AmmoChanged?.Invoke();
+        }
+
         protected IEnumerator ResetFireCooldown()
         {
             yield return new WaitForSeconds(RateOfFire);
@@ -81,6 +154,16 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Weapons
         private void Awake()
         {
             _shellParticleSystem = GetComponentInChildren<ParticleSystem>();
+            AmmoInMagazine = MagazineRounds;
+            AmmoInReserve = MaxAmmo;
+        }
+
+        private void OnDisable()
+        {
+            // корутины останавливаются при выключении объекта — сбрасываем флаги,
+            // иначе оружие "зависнет" в перезарядке или кулдауне
+            IsReloading = false;
+            mayFire = true;
         }
     }
 }

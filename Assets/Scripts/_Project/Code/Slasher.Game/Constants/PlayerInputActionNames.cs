@@ -8,5 +8,6 @@
         public const string DASH = "Dash";
         public const string INTERACT = "Interact";
         public const string CLOSE_COMBAT_ACTION = "CloseCombatAction";
+        public const string RELOAD = "Reload";
     }
 }

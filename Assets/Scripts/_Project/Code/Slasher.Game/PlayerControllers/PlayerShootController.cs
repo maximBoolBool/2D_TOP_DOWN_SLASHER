@@ -1,18 +1,24 @@
 ﻿using Assets.Scripts._Project.Code.Slasher.Game.Constants;
 using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
+using Assets.Scripts._Project.Code.Slasher.Game.Services;
 using Assets.Scripts._Project.Code.Slasher.Game.Weapons;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Zenject;
 
 namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
 {
     public class PlayerShootController : MonoBehaviour
     {
+        [Inject]
+        private IWeaponUILoadService _weaponUILoadService;
+
         private UnitCharecteristic unitCharecteristic;
         private RangeWeapon[] _weapons;
         private PlayerInput playerInput;
         private RangeWeapon[] AutomaticWeapon => _weapons.Where(w => w.IsAutomatic).ToArray();
+        private RangeWeapon CurrentWeapon => _weapons.FirstOrDefault();
 
         private void Awake()
         {
@@ -21,9 +27,15 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
             _weapons = GetComponentsInChildren<RangeWeapon>();
         }
 
+        private void Start()
+        {
+            _weaponUILoadService?.SetWeapon(CurrentWeapon);
+        }
+
         public void RefreshWeapons()
         {
             _weapons = GetComponentsInChildren<RangeWeapon>();
+            _weaponUILoadService?.SetWeapon(CurrentWeapon);
         }
 
         private void OnEnable()
@@ -32,6 +44,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
             {
                 playerInput.actions[PlayerInputActionNames.FIRE].performed += OnFirePerformed;
                 playerInput.actions[PlayerInputActionNames.FIRE].canceled += OnFireCanceled;
+                playerInput.actions[PlayerInputActionNames.RELOAD].started += OnReload;
             }
         }
 
@@ -41,9 +54,10 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
             {
                 playerInput.actions[PlayerInputActionNames.FIRE].performed -= OnFirePerformed;
                 playerInput.actions[PlayerInputActionNames.FIRE].canceled -= OnFireCanceled;
+                playerInput.actions[PlayerInputActionNames.RELOAD].started -= OnReload;
             }
 
-            CancelInvoke(nameof(FireTick));
+            CancelInvoke(nameof(AutomaticFireTick));
         }
 
         private void OnFirePerformed(InputAction.CallbackContext context)
@@ -74,6 +88,19 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
             CancelInvoke(nameof(AutomaticFireTick));
         }
 
+        private void OnReload(InputAction.CallbackContext context)
+        {
+            if (!unitCharecteristic.IsAlive)
+            {
+                return;
+            }
+
+            foreach (var weapon in _weapons)
+            {
+                weapon.Reload();
+            }
+        }
+
         private void AutomaticFireTick()
         {
             FireTick(true);
@@ -85,7 +112,11 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
 
             foreach (var weapon in weapons)
             {
-                weapon.Execute();
+                // как в ETG: нажал на спуск с пустым магазином — началась перезарядка
+                if (!weapon.TryShoot() && weapon.AmmoInMagazine == 0)
+                {
+                    weapon.Reload();
+                }
             }
         }
     }

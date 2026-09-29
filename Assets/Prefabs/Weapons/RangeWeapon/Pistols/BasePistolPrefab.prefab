@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4492271545245659672, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <AmmoIcon>k__BackingField
+      value: 
+      objectReference: {fileID: -8163747045816357467, guid: f0b0040e20f8af248baf073ecc4ec160, type: 3}
     - target: {fileID: 2541341542375325238, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8252393546063426278, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: m_Name
-      value: RangeWeaponPrefab
+      value: BasePistolPrefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

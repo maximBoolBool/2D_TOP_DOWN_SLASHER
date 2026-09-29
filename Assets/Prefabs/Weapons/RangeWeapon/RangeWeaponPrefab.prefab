@@ -4984,5 +4984,9 @@ MonoBehaviour:
   <DeviationAngle>k__BackingField: 0
   <Type>k__BackingField: 0
   <BulletsPerShot>k__BackingField: 1
+  <MaxAmmo>k__BackingField: 60
+  <IsInfiniteAmmo>k__BackingField: 0
+  <ReloadTime>k__BackingField: 1
+  <AmmoIcon>k__BackingField: {fileID: -8163747045816357467, guid: f0b0040e20f8af248baf073ecc4ec160, type: 3}
   bulletPrefab: {fileID: 0}
   firePoint: {fileID: 3789076761171952433}
