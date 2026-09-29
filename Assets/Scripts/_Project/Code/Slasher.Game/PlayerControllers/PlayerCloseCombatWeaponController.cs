@@ -1,4 +1,5 @@
-﻿using Assets.Scripts._Project.Code.Slasher.Game.Weapons;
+﻿using Assets.Scripts._Project.Code.Slasher.Game.Constants;
+using Assets.Scripts._Project.Code.Slasher.Game.Weapons;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

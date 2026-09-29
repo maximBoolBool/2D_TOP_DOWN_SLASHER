@@ -1,4 +1,4 @@
-﻿using Assets.Scripts._Project.Code.Slasher.Game;
+﻿using Assets.Scripts._Project.Code.Slasher.Game.Constants;
 using Assets.Scripts._Project.Code.Slasher.Game.Helpers;
 using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
 using UnityEngine;

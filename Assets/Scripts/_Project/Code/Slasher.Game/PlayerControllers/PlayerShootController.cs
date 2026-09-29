@@ -1,4 +1,5 @@
-﻿using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
+﻿using Assets.Scripts._Project.Code.Slasher.Game.Constants;
+using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
 using Assets.Scripts._Project.Code.Slasher.Game.Weapons;
 using System.Linq;
 using UnityEngine;

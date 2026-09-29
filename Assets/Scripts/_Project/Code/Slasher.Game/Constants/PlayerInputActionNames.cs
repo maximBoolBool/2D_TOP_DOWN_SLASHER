@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts._Project.Code.Slasher.Game
+﻿namespace Assets.Scripts._Project.Code.Slasher.Game.Constants
 {
     public static class PlayerInputActionNames
     {
