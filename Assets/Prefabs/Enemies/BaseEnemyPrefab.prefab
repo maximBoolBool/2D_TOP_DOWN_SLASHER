@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -3541052998234924519}
   - component: {fileID: -5298136122618439517}
   - component: {fileID: 4420546933165087077}
+  - component: {fileID: -4042698345598969551}
   m_Layer: 6
   m_Name: BaseEnemyPrefab
   m_TagString: Enemy
@@ -181,3 +182,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-4042698345598969551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054278251284493715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ce103f9880c2348bef00cff319207e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Slasher.Game::Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic.UnitCharecteristic
+  speed: 2
+  health: 30

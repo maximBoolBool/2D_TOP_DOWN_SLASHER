@@ -11,7 +11,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Enemies
     {
         [Header("Attack Settings")]
         [SerializeField] private float _attackRange = 8f;
-        [SerializeField] private float _windupTime = 0.4f;
+        [SerializeField] private float _windupTime = 0.0f;
         [SerializeField] private float _recoveryTime = 0.6f;
         [SerializeField] private float _preferredDistance = 4f;
 
