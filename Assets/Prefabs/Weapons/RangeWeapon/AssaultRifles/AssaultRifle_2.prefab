@@ -48,6 +48,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6632345017924180414, guid: 64fc53985f2d12245a5e875903bcb72b, type: 3}
+      propertyPath: <Damage>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632345017924180414, guid: 64fc53985f2d12245a5e875903bcb72b, type: 3}
+      propertyPath: <RateOfFire>k__BackingField
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632345017924180414, guid: 64fc53985f2d12245a5e875903bcb72b, type: 3}
+      propertyPath: <DeviationAngle>k__BackingField
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632345017924180414, guid: 64fc53985f2d12245a5e875903bcb72b, type: 3}
+      propertyPath: <MagazineRounds>k__BackingField
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7645608692477247666, guid: 64fc53985f2d12245a5e875903bcb72b, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -76,6 +76,22 @@ PrefabInstance:
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 6794322806398068282, guid: 591bef85760e9c6409389333b9296f0c, type: 3}
+    - target: {fileID: 6917967386012838647, guid: c28f15e657904404caf4b69d85bc3578, type: 3}
+      propertyPath: <Damage>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917967386012838647, guid: c28f15e657904404caf4b69d85bc3578, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917967386012838647, guid: c28f15e657904404caf4b69d85bc3578, type: 3}
+      propertyPath: <DeviationAngle>k__BackingField
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917967386012838647, guid: c28f15e657904404caf4b69d85bc3578, type: 3}
+      propertyPath: <MagazineRounds>k__BackingField
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
