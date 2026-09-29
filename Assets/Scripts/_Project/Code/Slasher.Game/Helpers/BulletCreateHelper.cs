@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts._Project.Code.Slasher.Game.Helpers
 {
@@ -20,6 +21,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Helpers
             for (int i = 0; i < count; i++)
             {
                 var bulletInstance = GameObject.Instantiate(bullet, firePoint.position, firePoint.rotation);
+                SceneManager.MoveGameObjectToScene(bulletInstance.gameObject, firePoint.gameObject.scene);
                 bullets.Add(bulletInstance);
             }
 

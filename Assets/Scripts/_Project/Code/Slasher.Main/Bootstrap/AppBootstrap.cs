@@ -2,6 +2,7 @@ using Assets.Scripts._Project.Code.Slasher.Core.Constants;
 using Assets.Scripts._Project.Code.Slasher.Core.Enums;
 using Assets.Scripts._Project.Code.Slasher.Core.Models;
 using Assets.Scripts._Project.Code.Slasher.Core.Services;
+using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
 using Zenject;
 
@@ -21,11 +22,13 @@ namespace Assets.Scripts._Project.Code.Slasher.Main.Bootstrap
 
             if (alreadyOpenSceneType.HasValue)
             {
-                _gameGlobalStateManager.SetStatus(alreadyOpenSceneType.Value);
+                var sceneType = alreadyOpenSceneType.Value;
+                SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneType.GetSceneName()));
+                _gameGlobalStateManager.SetStatus(sceneType);
                 return;
             }
 
-            _sceneLoadService.SwitchScene(GameGlobalStateType.Menu);
+            _sceneLoadService.SwitchSceneAsync(GameGlobalStateType.Menu).Forget();
         }
 
         private GameGlobalStateType? FindAlreadyOpenSceneType()

@@ -4,7 +4,8 @@
     "references": [
         "Zenject",
         "Slasher.Game",
-        "Slasher.Core"
+        "Slasher.Core",
+        "UniTask"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
