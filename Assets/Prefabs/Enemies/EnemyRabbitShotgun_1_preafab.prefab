@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: _attackRange
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3080205963610760991, guid: dbd2d3b1a6b63ba448fbfb5bccb3fcd8, type: 3}
+      propertyPath: _preferredDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7327804175953251486, guid: dbd2d3b1a6b63ba448fbfb5bccb3fcd8, type: 3}
       propertyPath: m_Name
       value: EnemyRabbitShotgun_1_preafab

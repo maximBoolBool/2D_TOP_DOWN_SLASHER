@@ -1,4 +1,4 @@
-﻿using Assets.Scripts._Project.Code.Slasher.Game.Enums;
+using Assets.Scripts._Project.Code.Slasher.Game.Enums;
 using Assets.Scripts._Project.Code.Slasher.Game.Helpers;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +15,8 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic
         private int health = 1;
 
         private UnitStatusType _unitStatusType;
+
+        public event System.Action HealthChanged;
 
         public void Awake()
         {
@@ -46,6 +48,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic
 
             var resultHealthPoints = Mathf.Max(currentHealth - damage, 0);
             ActualCharacteristics[CharecteristicType.Health] = resultHealthPoints;
+            HealthChanged?.Invoke();
 
             var animator = GetComponent<Animator>();
             if (resultHealthPoints == 0)
