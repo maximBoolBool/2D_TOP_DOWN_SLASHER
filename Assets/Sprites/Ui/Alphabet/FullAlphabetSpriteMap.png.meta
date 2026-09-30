@@ -1,0 +1,1131 @@
+fileFormatVersion: 2
+guid: aad4af10f6c9f7645a386de28288f9cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2037250314048497461
+    second: FullAlphabetSpriteMap_0
+  - first:
+      213: -2508707677788652921
+    second: FullAlphabetSpriteMap_1
+  - first:
+      213: 1311176817488845423
+    second: FullAlphabetSpriteMap_2
+  - first:
+      213: -4604212082762404187
+    second: FullAlphabetSpriteMap_3
+  - first:
+      213: -3015410277144839703
+    second: FullAlphabetSpriteMap_4
+  - first:
+      213: 1202473672847377719
+    second: FullAlphabetSpriteMap_5
+  - first:
+      213: 2967042170807705906
+    second: FullAlphabetSpriteMap_6
+  - first:
+      213: 6446173982597574082
+    second: FullAlphabetSpriteMap_7
+  - first:
+      213: 8332572713273962507
+    second: FullAlphabetSpriteMap_8
+  - first:
+      213: 344014248777878459
+    second: FullAlphabetSpriteMap_9
+  - first:
+      213: 951378920321752453
+    second: FullAlphabetSpriteMap_10
+  - first:
+      213: -8005565824975890075
+    second: FullAlphabetSpriteMap_11
+  - first:
+      213: 6285367590727871131
+    second: FullAlphabetSpriteMap_12
+  - first:
+      213: 1313107473172048648
+    second: FullAlphabetSpriteMap_13
+  - first:
+      213: -7415430347014496219
+    second: FullAlphabetSpriteMap_14
+  - first:
+      213: -3890820232756006138
+    second: FullAlphabetSpriteMap_15
+  - first:
+      213: -5049654282803297161
+    second: FullAlphabetSpriteMap_16
+  - first:
+      213: -6335088496417413141
+    second: FullAlphabetSpriteMap_17
+  - first:
+      213: -566441302512697201
+    second: FullAlphabetSpriteMap_18
+  - first:
+      213: 1574733282507098864
+    second: FullAlphabetSpriteMap_19
+  - first:
+      213: -6684292832133065872
+    second: FullAlphabetSpriteMap_20
+  - first:
+      213: 6371661918490874412
+    second: FullAlphabetSpriteMap_21
+  - first:
+      213: 6121660793119449355
+    second: FullAlphabetSpriteMap_22
+  - first:
+      213: 7308889179927670387
+    second: FullAlphabetSpriteMap_23
+  - first:
+      213: 5244406901822375497
+    second: FullAlphabetSpriteMap_24
+  - first:
+      213: -2164650869954356269
+    second: FullAlphabetSpriteMap_25
+  - first:
+      213: 8148101323956870743
+    second: FullAlphabetSpriteMap_26
+  - first:
+      213: -6891635444725761086
+    second: FullAlphabetSpriteMap_27
+  - first:
+      213: 4394791284442070089
+    second: FullAlphabetSpriteMap_28
+  - first:
+      213: 4723276987380414076
+    second: FullAlphabetSpriteMap_29
+  - first:
+      213: 7600807130653557827
+    second: FullAlphabetSpriteMap_30
+  - first:
+      213: 2245213992291916250
+    second: FullAlphabetSpriteMap_31
+  - first:
+      213: 4056233161914002591
+    second: FullAlphabetSpriteMap_32
+  - first:
+      213: -8319285096599127403
+    second: FullAlphabetSpriteMap_33
+  - first:
+      213: 6439638501892833492
+    second: FullAlphabetSpriteMap_34
+  - first:
+      213: 2562294561116836500
+    second: FullAlphabetSpriteMap_35
+  - first:
+      213: 8212042891477930246
+    second: FullAlphabetSpriteMap_36
+  - first:
+      213: -3086371373181450735
+    second: FullAlphabetSpriteMap_37
+  - first:
+      213: -8491257245861339832
+    second: FullAlphabetSpriteMap_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537e967ed54c54c10800000000000000
+      internalID: 2037250314048497461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78abc14a8a74f2dd0800000000000000
+      internalID: -2508707677788652921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a562c5e5c323210800000000000000
+      internalID: 1311176817488845423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aea260418d8a10c0800000000000000
+      internalID: -4604212082762404187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e938ba445c1726d0800000000000000
+      internalID: -3015410277144839703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735c3d93f6b00b010800000000000000
+      internalID: 1202473672847377719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_6
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231e890622d0d2920800000000000000
+      internalID: 2967042170807705906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_7
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cde7197519657950800000000000000
+      internalID: 6446173982597574082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_8
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00becf1cbe33a370800000000000000
+      internalID: 8332572713273962507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbb0418f22f26c400800000000000000
+      internalID: 344014248777878459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_10
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d9290661af33d00800000000000000
+      internalID: 951378920321752453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_11
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5691e482c4486e090800000000000000
+      internalID: -8005565824975890075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_12
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 0
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a6610c58c1a3750800000000000000
+      internalID: 6285367590727871131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_13
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ba45a2a48193210800000000000000
+      internalID: 1313107473172048648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_14
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 520ac855369171990800000000000000
+      internalID: -7415430347014496219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_15
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603fcaddc97010ac0800000000000000
+      internalID: -3890820232756006138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_16
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774cafa1f260ce9b0800000000000000
+      internalID: -5049654282803297161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_17
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be76066c39e3518a0800000000000000
+      internalID: -6335088496417413141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_18
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f800f91f2a89328f0800000000000000
+      internalID: -566441302512697201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_19
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa02dfb3939ad510800000000000000
+      internalID: 1574733282507098864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_20
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073d406851f9c33a0800000000000000
+      internalID: -6684292832133065872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_21
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c225880a1c0bc6850800000000000000
+      internalID: 6371661918490874412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_22
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 0
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b012251be0284f450800000000000000
+      internalID: 6121660793119449355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_23
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ee8482cf36e6560800000000000000
+      internalID: 7308889179927670387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_24
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 946cab88a40e7c840800000000000000
+      internalID: 5244406901822375497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_25
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db51a9a08d95f1e0800000000000000
+      internalID: -2164650869954356269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_26
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 0
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ed650dbfed31170800000000000000
+      internalID: 8148101323956870743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_27
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb31a3931efb50a0800000000000000
+      internalID: -6891635444725761086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_28
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94cf62b736f6dfc30800000000000000
+      internalID: 4394791284442070089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_29
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76369025637c8140800000000000000
+      internalID: 4723276987380414076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_30
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 0
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3448cd480dd7b7960800000000000000
+      internalID: 7600807130653557827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_31
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9db47fa3a982f10800000000000000
+      internalID: 2245213992291916250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_32
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c2b06e192aa4830800000000000000
+      internalID: 4056233161914002591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_33
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59af1083846fb8c80800000000000000
+      internalID: -8319285096599127403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_34
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0404b49113e5950800000000000000
+      internalID: 6439638501892833492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_35
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 492d845e3591f8320800000000000000
+      internalID: 2562294561116836500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_36
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60150d2208907f170800000000000000
+      internalID: 8212042891477930246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_37
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116c590a6910b25d0800000000000000
+      internalID: -3086371373181450735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullAlphabetSpriteMap_38
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d19f3068ef82a80800000000000000
+      internalID: -8491257245861339832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FullAlphabetSpriteMap_0: 2037250314048497461
+      FullAlphabetSpriteMap_1: -2508707677788652921
+      FullAlphabetSpriteMap_10: 951378920321752453
+      FullAlphabetSpriteMap_11: -8005565824975890075
+      FullAlphabetSpriteMap_12: 6285367590727871131
+      FullAlphabetSpriteMap_13: 1313107473172048648
+      FullAlphabetSpriteMap_14: -7415430347014496219
+      FullAlphabetSpriteMap_15: -3890820232756006138
+      FullAlphabetSpriteMap_16: -5049654282803297161
+      FullAlphabetSpriteMap_17: -6335088496417413141
+      FullAlphabetSpriteMap_18: -566441302512697201
+      FullAlphabetSpriteMap_19: 1574733282507098864
+      FullAlphabetSpriteMap_2: 1311176817488845423
+      FullAlphabetSpriteMap_20: -6684292832133065872
+      FullAlphabetSpriteMap_21: 6371661918490874412
+      FullAlphabetSpriteMap_22: 6121660793119449355
+      FullAlphabetSpriteMap_23: 7308889179927670387
+      FullAlphabetSpriteMap_24: 5244406901822375497
+      FullAlphabetSpriteMap_25: -2164650869954356269
+      FullAlphabetSpriteMap_26: 8148101323956870743
+      FullAlphabetSpriteMap_27: -6891635444725761086
+      FullAlphabetSpriteMap_28: 4394791284442070089
+      FullAlphabetSpriteMap_29: 4723276987380414076
+      FullAlphabetSpriteMap_3: -4604212082762404187
+      FullAlphabetSpriteMap_30: 7600807130653557827
+      FullAlphabetSpriteMap_31: 2245213992291916250
+      FullAlphabetSpriteMap_32: 4056233161914002591
+      FullAlphabetSpriteMap_33: -8319285096599127403
+      FullAlphabetSpriteMap_34: 6439638501892833492
+      FullAlphabetSpriteMap_35: 2562294561116836500
+      FullAlphabetSpriteMap_36: 8212042891477930246
+      FullAlphabetSpriteMap_37: -3086371373181450735
+      FullAlphabetSpriteMap_38: -8491257245861339832
+      FullAlphabetSpriteMap_4: -3015410277144839703
+      FullAlphabetSpriteMap_5: 1202473672847377719
+      FullAlphabetSpriteMap_6: 2967042170807705906
+      FullAlphabetSpriteMap_7: 6446173982597574082
+      FullAlphabetSpriteMap_8: 8332572713273962507
+      FullAlphabetSpriteMap_9: 344014248777878459
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts._Project.Code.Slasher.Core.Constants;
 using Assets.Scripts._Project.Code.Slasher.Core.Enums;
 using Assets.Scripts._Project.Code.Slasher.Core.Models;
+using Assets.Scripts._Project.Code.Slasher.Core.Ui;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,34 +20,47 @@ namespace Assets.Scripts._Project.Code.Slasher.Core.Services
     {
         private readonly IGameGlobalStateManager _gameGlobalStateManager;
         private readonly ZenjectSceneLoader _zenjectSceneLoader;
+        private readonly ILoadingScreen _loadingScreen;
 
         public SceneLoadService(
             IGameGlobalStateManager gameGlobalStateManager,
-            ZenjectSceneLoader zenjectSceneLoader)
+            ZenjectSceneLoader zenjectSceneLoader,
+            ILoadingScreen loadingScreen)
         {
             _gameGlobalStateManager = gameGlobalStateManager;
             _zenjectSceneLoader = zenjectSceneLoader;
+            _loadingScreen = loadingScreen;
         }
 
         public async UniTask SwitchSceneAsync(GameGlobalStateType newSceneType)
         {
-            string previousSceneName = _gameGlobalStateManager.CurrentState.GetSceneName();
-            string newSceneName = newSceneType.GetSceneName();
+            _loadingScreen.Show();
 
-            await _zenjectSceneLoader
-                .LoadSceneAsync(newSceneName, LoadSceneMode.Additive)
-                .ToUniTask();
-
-            var newlyLoadedScene = SceneManager.GetSceneByName(newSceneName);
-            if (newlyLoadedScene.IsValid())
+            try
             {
-                SceneManager.SetActiveScene(newlyLoadedScene);
-                _gameGlobalStateManager.SetStatus(newSceneType);
+                string previousSceneName = _gameGlobalStateManager.CurrentState.GetSceneName();
+                string newSceneName = newSceneType.GetSceneName();
+
+                await _zenjectSceneLoader
+                    .LoadSceneAsync(newSceneName, LoadSceneMode.Additive)
+                    .ToUniTask();
+
+                var newlyLoadedScene = SceneManager.GetSceneByName(newSceneName);
+                if (newlyLoadedScene.IsValid())
+                {
+                    SceneManager.SetActiveScene(newlyLoadedScene);
+                    _gameGlobalStateManager.SetStatus(newSceneType);
+                }
+
+                if (previousSceneName != SceneNamesConstants.ROOT && previousSceneName != newSceneName)
+                {
+                    await UnloadSceneAsync(previousSceneName);
+                }
             }
-
-            if (previousSceneName != SceneNamesConstants.ROOT && previousSceneName != newSceneName)
+            finally
             {
-                await UnloadSceneAsync(previousSceneName);
+                // прячем экран, даже если загрузка упала с ошибкой
+                _loadingScreen.Hide();
             }
         }
 

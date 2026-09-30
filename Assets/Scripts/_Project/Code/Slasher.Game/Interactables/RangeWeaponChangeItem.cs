@@ -2,6 +2,8 @@ using UnityEngine;
 using Assets.Scripts._Project.Code.Slasher.Game.Weapons;
 using Assets.Scripts._Project.Code.Slasher.Core.Constants;
 using Assets.Scripts._Project.Code.Slasher.Game.Helpers;
+using Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers;
+using Zenject;
 
 namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
 {
@@ -10,6 +12,9 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
         [SerializeField]
         private RangeWeapon _rangeWeaponPrefab;
         private SpriteRenderer _weaponSpriteRenderer;
+
+        [Inject] private PlayerShootController _shootController;
+        [Inject] private PlayerWeaponAimController _aimController;
 
         private void Awake()
         {
@@ -37,7 +42,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
             var player = GameObject.FindGameObjectWithTag(TagConstants.PLAYER);
             var aimPart = player.transform.Find("AimShootUnitPart");         
 
-            PlayerWeaponHelper.ChangeWeapon(aimPart.gameObject, _rangeWeaponPrefab);
+            PlayerWeaponHelper.ChangeWeapon(aimPart.gameObject, _rangeWeaponPrefab, _shootController, _aimController);
 
             Destroy(gameObject.transform.parent.gameObject);
         }

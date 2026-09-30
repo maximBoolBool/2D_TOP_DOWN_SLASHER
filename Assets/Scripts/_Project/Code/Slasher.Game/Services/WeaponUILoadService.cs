@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Assets.Scripts._Project.Code.Slasher.Game.Constants;
+using Assets.Scripts._Project.Code.Slasher.Game.EventBusMessages;
 using Assets.Scripts._Project.Code.Slasher.Game.Weapons;
 using TMPro;
 using UnityEngine;
@@ -8,10 +9,11 @@ using Zenject;
 
 namespace Assets.Scripts._Project.Code.Slasher.Game.Services
 {
-    public interface IWeaponUILoadService
-    {
-        void SetWeapon(RangeWeapon weapon);
-    }
+    /// <summary>
+    /// UI патронов игрока. Узнаёт о смене оружия через PlayerWeaponChangedMessage,
+    /// а патроны/перезарядку слушает у самого текущего оружия.
+    /// </summary>
+    public interface IWeaponUILoadService : IEventBusConsumer { }
 
     public class WeaponUILoadService : IWeaponUILoadService
     {
@@ -27,7 +29,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
         private static readonly Color LoadedColor = Color.white;
         private static readonly Color SpentColor = new(0.3f, 0.3f, 0.3f, 1f);
 
-        [Inject(Id = GameObjectInjectConstants.WEAPON_LOAD_GO)]
+        private readonly SignalBus _signalBus;
         private readonly GameObject _weaponLoadGO;
 
         private readonly List<Image> _icons = new();
@@ -35,13 +37,38 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
         private TextMeshProUGUI _counterText;
         private RangeWeapon _weapon;
 
-        public void SetWeapon(RangeWeapon weapon)
+        public WeaponUILoadService(
+            SignalBus signalBus,
+            [Inject(Id = GameObjectInjectConstants.WEAPON_LOAD_GO)] GameObject weaponLoadGO)
         {
-            if (_weapon != null)
-            {
-                _weapon.AmmoChanged -= Refresh;
-                _weapon.ReloadStarted -= OnReloadStarted;
-            }
+            _signalBus = signalBus;
+            _weaponLoadGO = weaponLoadGO;
+        }
+
+        public void Subscribe()
+        {
+            _signalBus.Subscribe<PlayerWeaponChangedMessage>(OnPlayerWeaponChanged);
+        }
+
+        public void Unsubscribe()
+        {
+            _signalBus.Unsubscribe<PlayerWeaponChangedMessage>(OnPlayerWeaponChanged);
+            DetachWeapon();
+        }
+
+        public void Dispose()
+        {
+            Unsubscribe();
+        }
+
+        private void OnPlayerWeaponChanged(PlayerWeaponChangedMessage message)
+        {
+            SetWeapon(message.Weapon);
+        }
+
+        private void SetWeapon(RangeWeapon weapon)
+        {
+            DetachWeapon();
 
             _weapon = weapon;
 
@@ -52,6 +79,19 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
             }
 
             Refresh();
+        }
+
+        // отписываемся от патронов текущего оружия, UI не трогаем
+        // (при выгрузке сцены он может быть уже уничтожен)
+        private void DetachWeapon()
+        {
+            if (_weapon != null)
+            {
+                _weapon.AmmoChanged -= Refresh;
+                _weapon.ReloadStarted -= OnReloadStarted;
+            }
+
+            _weapon = null;
         }
 
         private void OnReloadStarted(float duration)

@@ -13,6 +13,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
         private CloseCombatWeapon _closeCombatWeapon;
         private PlayerInput _playerInput;
         private Camera _mainCamera;
+        private InputAction _closeCombatAction;
 
         private void Awake()
         {
@@ -24,12 +25,24 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
 
         public void OnEnable()
         {
-            _playerInput.actions[PlayerInputActionNames.CLOSE_COMBAT_ACTION].performed += Execute;
+            if (_playerInput == null)
+            {
+                return;
+            }
+
+            _closeCombatAction = _playerInput.actions[PlayerInputActionNames.CLOSE_COMBAT_ACTION];
+            _closeCombatAction.performed += Execute;
         }
 
         public void OnDisable()
         {
-            _playerInput.actions[PlayerInputActionNames.CLOSE_COMBAT_ACTION].performed -= Execute;
+            // при выгрузке сцены PlayerInput может быть уничтожен раньше нас,
+            // поэтому отписываемся через сохранённый action, а не через PlayerInput
+            if (_closeCombatAction != null)
+            {
+                _closeCombatAction.performed -= Execute;
+                _closeCombatAction = null;
+            }
         }
 
         public void Execute(InputAction.CallbackContext context)

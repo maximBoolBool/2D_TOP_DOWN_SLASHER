@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7069279563363843238}
-  - component: {fileID: 9012697124804155886}
-  - component: {fileID: 1981730020160214254}
   m_Layer: 8
   m_Name: AimShootUnitPart
   m_TagString: Untagged
@@ -34,30 +32,6 @@ Transform:
   - {fileID: 7114401452353143469}
   m_Father: {fileID: 8749988484222374150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9012697124804155886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770395950645056038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f084582049a1af44f9cbb7b87bf5dbf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PlayerShooter
---- !u!114 &1981730020160214254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770395950645056038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc8e56ee03e84ee48a01418bd40d3fdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PlayerWeaponAiming
 --- !u!1 &3218730049033437343
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,9 +44,6 @@ GameObject:
   - component: {fileID: 5423586708619757039}
   - component: {fileID: 5730872688914793422}
   - component: {fileID: 3708349966241873881}
-  - component: {fileID: 475677810687827484}
-  - component: {fileID: 5998807447747573073}
-  - component: {fileID: 6043866961605806954}
   - component: {fileID: 110228039952637309}
   - component: {fileID: 3395438975470926800}
   - component: {fileID: 1545283991668126133}
@@ -194,46 +165,6 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &475677810687827484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3218730049033437343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76aa97c7ef01a54488a4ab4a84c0cc00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  _moveSpeed: 3
---- !u!114 &5998807447747573073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3218730049033437343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f88b3799ce8604dba3b60c3915532a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PlayerDashBehaviorus
-  dashDistance: 4
-  dashDuration: 0.5
-  dashCooldown: 1.5
---- !u!114 &6043866961605806954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3218730049033437343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95a0b8c7d5d3e244f820c49f6a56f56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.PlayerControllers.PlayerInteractController
 --- !u!212 &110228039952637309
 SpriteRenderer:
   serializedVersion: 3

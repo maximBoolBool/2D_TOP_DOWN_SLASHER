@@ -1,6 +1,6 @@
 ﻿using Assets.Scripts._Project.Code.Slasher.Game.Constants;
 using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
-using Assets.Scripts._Project.Code.Slasher.Game.Services;
+using Assets.Scripts._Project.Code.Slasher.Game.EventBusMessages;
 using Assets.Scripts._Project.Code.Slasher.Game.Weapons;
 using System.Linq;
 using UnityEngine;
@@ -11,50 +11,77 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
 {
     public class PlayerShootController : MonoBehaviour
     {
-        [Inject]
-        private IWeaponUILoadService _weaponUILoadService;
+        private SignalBus _signalBus;
 
-        private UnitCharecteristic unitCharecteristic;
+        [Header("Unit references")]
+        [SerializeField] private PlayerInput playerInput;
+        [SerializeField] private UnitCharecteristic unitCharecteristic;
+        [Tooltip("Объект, внутри которого лежит оружие (AimShootUnitPart)")]
+        [SerializeField] private Transform _weaponsRoot;
+
         private RangeWeapon[] _weapons;
-        private PlayerInput playerInput;
+        private InputAction _fireAction;
+        private InputAction _reloadAction;
         private RangeWeapon[] AutomaticWeapon => _weapons.Where(w => w.IsAutomatic).ToArray();
         private RangeWeapon CurrentWeapon => _weapons.FirstOrDefault();
 
+        [Inject]
+        public void Construct(SignalBus signalBus)
+        {
+            _signalBus = signalBus;
+        }
+
         private void Awake()
         {
-            playerInput = GetComponentInParent<PlayerInput>();
-            unitCharecteristic = GetComponentInParent<UnitCharecteristic>();
-            _weapons = GetComponentsInChildren<RangeWeapon>();
+            _weapons = _weaponsRoot.GetComponentsInChildren<RangeWeapon>();
         }
 
         private void Start()
         {
-            _weaponUILoadService?.SetWeapon(CurrentWeapon);
+            NotifyWeaponChanged();
         }
 
         public void RefreshWeapons()
         {
-            _weapons = GetComponentsInChildren<RangeWeapon>();
-            _weaponUILoadService?.SetWeapon(CurrentWeapon);
+            _weapons = _weaponsRoot.GetComponentsInChildren<RangeWeapon>();
+            NotifyWeaponChanged();
+        }
+
+        private void NotifyWeaponChanged()
+        {
+            _signalBus.Fire(new PlayerWeaponChangedMessage(CurrentWeapon));
         }
 
         private void OnEnable()
         {
-            if (playerInput != null)
+            if (playerInput == null)
             {
-                playerInput.actions[PlayerInputActionNames.FIRE].performed += OnFirePerformed;
-                playerInput.actions[PlayerInputActionNames.FIRE].canceled += OnFireCanceled;
-                playerInput.actions[PlayerInputActionNames.RELOAD].started += OnReload;
+                return;
             }
+
+            _fireAction = playerInput.actions[PlayerInputActionNames.FIRE];
+            _reloadAction = playerInput.actions[PlayerInputActionNames.RELOAD];
+
+            _fireAction.performed += OnFirePerformed;
+            _fireAction.canceled += OnFireCanceled;
+            _reloadAction.started += OnReload;
         }
 
         private void OnDisable()
         {
-            if (playerInput != null)
+            // при выгрузке сцены PlayerInput может быть уничтожен раньше нас,
+            // поэтому отписываемся через сохранённый action, а не через PlayerInput
+            if (_fireAction != null)
             {
-                playerInput.actions[PlayerInputActionNames.FIRE].performed -= OnFirePerformed;
-                playerInput.actions[PlayerInputActionNames.FIRE].canceled -= OnFireCanceled;
-                playerInput.actions[PlayerInputActionNames.RELOAD].started -= OnReload;
+                _fireAction.performed -= OnFirePerformed;
+                _fireAction.canceled -= OnFireCanceled;
+                _fireAction = null;
+            }
+
+            if (_reloadAction != null)
+            {
+                _reloadAction.started -= OnReload;
+                _reloadAction = null;
             }
 
             CancelInvoke(nameof(AutomaticFireTick));

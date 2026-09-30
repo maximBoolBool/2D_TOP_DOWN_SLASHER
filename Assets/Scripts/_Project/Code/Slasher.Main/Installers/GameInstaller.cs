@@ -1,6 +1,7 @@
-﻿using Assets.Scripts._Project.Code.Slasher.Game.Bootstraps;
+using Assets.Scripts._Project.Code.Slasher.Game.Bootstraps;
 using Assets.Scripts._Project.Code.Slasher.Game.Constants;
 using Assets.Scripts._Project.Code.Slasher.Game.EventBusMessages;
+using Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers;
 using Assets.Scripts._Project.Code.Slasher.Game.Services;
 using UnityEngine;
 using Zenject;
@@ -31,12 +32,22 @@ namespace Assets.Scripts._Project.Code.Slasher.Main.Installers
             Container.Bind<IUserHealthBarService>().To<UserHealthBarService>().AsSingle();
             Container.Bind<IWeaponUILoadService>().To<WeaponUILoadService>().AsSingle();
 
+            BindUserControllers();
+
             Container.BindInterfacesAndSelfTo<GameBootstrap>().AsSingle();
+        }
+
+        private void BindUserControllers()
+        {
+            Container.Bind<PlayerInteractController>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<PlayerShootController>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<PlayerWeaponAimController>().FromComponentInHierarchy().AsSingle();
         }
 
         private void InjectMessages()
         {
             Container.DeclareSignal<HealthChangeMessage>();
+            Container.DeclareSignal<PlayerWeaponChangedMessage>();
         }
     }
 }

@@ -7,37 +7,46 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
 {
     public class PlayerWeaponAimController : MonoBehaviour
     {
+        [Header("Unit references")]
+        [SerializeField] private PlayerInput _playerInput;
+        [SerializeField] private UnitCharecteristic _charecteristic;
+        [Tooltip("Объект, который поворачивается за прицелом (AimShootUnitPart)")]
+        [SerializeField] private Transform _aimRoot;
+
         private Camera mainCamera;
         private SpriteRenderer _spriteRenderer;
-        private PlayerInput _playerInput;
-        private UnitCharecteristic _charecteristic;
+        private InputAction _aimAction;
 
         private void Awake()
         {
             mainCamera = Camera.main;
-            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            _playerInput = GetComponentInParent<PlayerInput>();
-            _charecteristic = GetComponentInParent<UnitCharecteristic>();
+            _spriteRenderer = _aimRoot.GetComponentInChildren<SpriteRenderer>();
         }
 
         public void RefreshSprite()
         {
-            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            _spriteRenderer = _aimRoot.GetComponentInChildren<SpriteRenderer>();
         }
 
         private void OnEnable()
         {
-            if (_playerInput != null)
+            if (_playerInput == null)
             {
-                _playerInput.actions[PlayerInputActionNames.AIM].performed += OnAimPerformed;
+                return;
             }
+
+            _aimAction = _playerInput.actions[PlayerInputActionNames.AIM];
+            _aimAction.performed += OnAimPerformed;
         }
 
         private void OnDisable()
         {
-            if (_playerInput != null)
+            // при выгрузке сцены PlayerInput может быть уничтожен раньше нас,
+            // поэтому отписываемся через сохранённый action, а не через PlayerInput
+            if (_aimAction != null)
             {
-                _playerInput.actions[PlayerInputActionNames.AIM].performed -= OnAimPerformed;
+                _aimAction.performed -= OnAimPerformed;
+                _aimAction = null;
             }
         }
 
@@ -53,10 +62,10 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
             Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(mouseScreenPosition);
             mouseWorldPosition.z = 0f;
 
-            var aimDirection = (mouseWorldPosition - transform.position).normalized;
+            var aimDirection = (mouseWorldPosition - _aimRoot.position).normalized;
             float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
 
-            transform.rotation = Quaternion.Euler(0f, 0f, angle);
+            _aimRoot.rotation = Quaternion.Euler(0f, 0f, angle);
             _spriteRenderer.flipY = Mathf.Abs(angle) > 90f;
         }
     }

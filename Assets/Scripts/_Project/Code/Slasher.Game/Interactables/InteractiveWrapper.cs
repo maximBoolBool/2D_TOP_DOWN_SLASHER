@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Assets.Scripts._Project.Code.Slasher.Core.Constants;
 using Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers;
+using Zenject;
 
 namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
 {
@@ -10,6 +11,8 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
         private BaseInteractiveItem _interactiveItem;
         private Animator animator;
         private GameObject _buttonLable;
+
+        [Inject] private PlayerInteractController _playerInteractController;
 
         public void Interact()
         {
@@ -38,7 +41,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
             isPlayerInRange = true;
             _buttonLable.SetActive(true);
             // сообщаем игроку, что теперь именно этот объект — текущий интерактивный
-            collision.GetComponent<PlayerInteractController>()?.SetInteractiveWrapper(this);
+            _playerInteractController.SetInteractiveWrapper(this);
         }
 
         private void OnTriggerExit2D(Collider2D collision)
@@ -50,7 +53,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
 
             isPlayerInRange = false;
             _buttonLable.SetActive(false);
-            collision.GetComponent<PlayerInteractController>()?.SetInteractiveWrapper(null);
+            _playerInteractController.SetInteractiveWrapper(null);
         }
     }
 

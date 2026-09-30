@@ -4,46 +4,47 @@ using Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovementController : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private float _moveSpeed = 3f;
 
-    [Header("References")]
-    private Rigidbody2D _rb;
-    private PlayerInput _playerInput;
-    private UnitCharecteristic _unitCharecteristic;
-    private Vector2 _lastInputDirection;
+    [Header("Unit references")]
+    [SerializeField] private Rigidbody2D _rb;
+    [SerializeField] private PlayerInput _playerInput;
+    [SerializeField] private UnitCharecteristic _unitCharecteristic;
+    [SerializeField] private Animator _animator;
 
-    private void Awake()
-    {
-        _rb = GetComponent<Rigidbody2D>();
-        _playerInput = GetComponent<PlayerInput>();
-        _unitCharecteristic = GetComponent<UnitCharecteristic>();
-    }
+    private Vector2 _lastInputDirection;
+    private InputAction _moveAction;
 
     private void OnEnable()
     {
-        if (_playerInput != null)
+        if (_playerInput == null)
         {
-            _playerInput.actions[PlayerInputActionNames.MOVE].performed += OnMove;
-            _playerInput.actions[PlayerInputActionNames.MOVE].canceled += OnMove;
+            return;
         }
+
+        _moveAction = _playerInput.actions[PlayerInputActionNames.MOVE];
+        _moveAction.performed += OnMove;
+        _moveAction.canceled += OnMove;
     }
 
     private void OnDisable()
     {
-        if (_playerInput != null)
+        // при выгрузке сцены PlayerInput может быть уничтожен раньше нас,
+        // поэтому отписываемся через сохранённый action, а не через PlayerInput
+        if (_moveAction != null)
         {
-            _playerInput.actions[PlayerInputActionNames.MOVE].performed -= OnMove;
-            _playerInput.actions[PlayerInputActionNames.MOVE].canceled -= OnMove;
+            _moveAction.performed -= OnMove;
+            _moveAction.canceled -= OnMove;
+            _moveAction = null;
         }
     }
 
     private void OnMove(InputAction.CallbackContext context)
     {
-        if(!_unitCharecteristic.IsAlive)
+        if (!_unitCharecteristic.IsAlive)
         {
             return;
         }
@@ -55,15 +56,15 @@ public class PlayerMovementController : MonoBehaviour
 
     private void SetUnitVector(Vector2 vector)
     {
-        UnitDirectionHelper.SetDirection(gameObject, vector);
-        UnitAnimationHelper.SetAnimation(GetComponent<Animator>(), vector);
+        UnitDirectionHelper.SetDirection(_rb.gameObject, vector);
+        UnitAnimationHelper.SetAnimation(_animator, vector);
         _rb.linearVelocity = vector * _moveSpeed;
     }
 
     public void RestoreMovement()
     {
         if (!_unitCharecteristic.IsAlive)
-        { 
+        {
             return;
         }
 

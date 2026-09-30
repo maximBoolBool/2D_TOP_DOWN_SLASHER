@@ -8,58 +8,65 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers
 {
     public class PlayerDashController : MonoBehaviour
     {
+        [Header("Settings")]
         [SerializeField] private float dashDistance = 0.001f;
         [SerializeField] private float dashDuration = 0.4f;
         [SerializeField] private float dashCooldown = 1f;
-        private Rigidbody2D _rb;
-        private PlayerInput _playerInput;
+
+        [Header("Unit references")]
+        [SerializeField] private Rigidbody2D _rb;
+        [SerializeField] private PlayerInput _playerInput;
+        [SerializeField] private UnitCharecteristic _unitCharecteristic;
+        [SerializeField] private PlayerMovementController _playerMovementController;
+
         private InputAction _aimAction;
+        private InputAction _dashAction;
         private Camera _mainCamera;
         private bool _isDashing;
         private bool _canDash = true;
-        private UnitCharecteristic _unitCharecteristic;
-        private PlayerMovementController _playerMovementController;
 
         public bool IsDashing => _isDashing;
 
         private void Awake()
         {
-            _unitCharecteristic = GetComponent<UnitCharecteristic>();
             _mainCamera = Camera.main;
-            _rb = GetComponent<Rigidbody2D>();
-            _playerInput = GetComponent<PlayerInput>();
-            _playerMovementController = GetComponent<PlayerMovementController>();
             _aimAction = _playerInput.actions[PlayerInputActionNames.AIM];
         }
 
         private void OnEnable()
         {
-            if (_playerInput != null)
+            if (_playerInput == null)
             {
-                _playerInput.actions[PlayerInputActionNames.DASH].started += OnDash;
+                return;
             }
+
+            _dashAction = _playerInput.actions[PlayerInputActionNames.DASH];
+            _dashAction.started += OnDash;
         }
 
         private void OnDisable()
         {
-            if (_playerInput != null)
+            // при выгрузке сцены PlayerInput может быть уничтожен раньше нас,
+            // поэтому отписываемся через сохранённый action, а не через PlayerInput
+            if (_dashAction != null)
             {
-                _playerInput.actions[PlayerInputActionNames.DASH].started -= OnDash;
+                _dashAction.started -= OnDash;
+                _dashAction = null;
             }
         }
 
         private void OnDash(InputAction.CallbackContext context)
         {
-            if(!_unitCharecteristic.IsAlive || !_canDash)
+            if (!_unitCharecteristic.IsAlive || !_canDash)
             {
                 return;
             }
 
             var mouseScreenPosition = _aimAction.ReadValue<Vector2>();
             var mouseWorldPosition = _mainCamera.ScreenToWorldPoint(mouseScreenPosition);
-            var gameObjectPosition = transform.position;
-            mouseWorldPosition.z = gameObjectPosition.z;
-            Vector2 dashDirection = (mouseWorldPosition - gameObjectPosition).normalized;
+            var unitPosition = _rb.transform.position;
+            mouseWorldPosition.z = unitPosition.z;
+            Vector2 dashDirection = (mouseWorldPosition - unitPosition).normalized;
             StartCoroutine(PerformDash(dashDirection));
         }
 

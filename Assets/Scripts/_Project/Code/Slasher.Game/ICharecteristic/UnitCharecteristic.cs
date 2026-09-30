@@ -16,7 +16,6 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic
 
         private UnitStatusType _unitStatusType;
 
-        /// <summary>current, max</summary>
         public event Action<int, int> HealthChanged;
 
         public void Awake()

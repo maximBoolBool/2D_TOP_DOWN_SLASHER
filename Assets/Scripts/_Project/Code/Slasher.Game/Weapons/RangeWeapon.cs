@@ -57,7 +57,6 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Weapons
 
         private ParticleSystem _shellParticleSystem;
 
-        // патроны в магазине и в запасе этого конкретного ствола
         public int AmmoInMagazine { get; private set; }
         public int AmmoInReserve { get; private set; }
         public bool IsReloading { get; private set; }
@@ -67,12 +66,9 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Weapons
             && AmmoInMagazine < MagazineRounds
             && (IsInfiniteAmmo || AmmoInReserve > 0);
 
-        // вызываются после любого изменения патронов / в начале перезарядки
         public event Action AmmoChanged;
         public event Action<float> ReloadStarted;
 
-        // Execute стреляет без учёта патронов (так стреляют враги),
-        // TryShoot учитывает магазин и перезарядку (так стреляет игрок)
         public override void Execute()
         {
             if (!mayFire)
