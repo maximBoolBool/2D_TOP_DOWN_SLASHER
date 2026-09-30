@@ -1,9 +1,10 @@
 using Assets.Scripts._Project.Code.Slasher.Game.Enums;
+using Assets.Scripts._Project.Code.Slasher.Game.EventBusMessages;
 using Assets.Scripts._Project.Code.Slasher.Game.Helpers;
 using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
+using Zenject;
 
 namespace Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic
 {
@@ -13,10 +14,13 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic
         private int speed = 1;
         [SerializeField]
         private int health = 1;
+        [SerializeField]
+        private bool isUser = false;
 
         private UnitStatusType _unitStatusType;
 
-        public event System.Action HealthChanged;
+        [Inject]
+        private readonly SignalBus _signalBus;
 
         public void Awake()
         {
@@ -41,14 +45,21 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic
 
         public void SetDamage(int damage)
         {
-            if (!ActualCharacteristics.TryGetValue(CharecteristicType.Health, out int currentHealth))
+            if (!IsAlive)
+            {
+                return;
+            }
+
+            if (!ActualCharacteristics.TryGetValue(CharecteristicType.Health, out int currentHealth) 
+                || !BaseCharecteristics.TryGetValue(CharecteristicType.Health, out int maxHealth))
             {
                 return;
             }
 
             var resultHealthPoints = Mathf.Max(currentHealth - damage, 0);
             ActualCharacteristics[CharecteristicType.Health] = resultHealthPoints;
-            HealthChanged?.Invoke();
+
+            _signalBus.Fire(new HealthChangeMessage(resultHealthPoints, maxHealth));
 
             var animator = GetComponent<Animator>();
             if (resultHealthPoints == 0)

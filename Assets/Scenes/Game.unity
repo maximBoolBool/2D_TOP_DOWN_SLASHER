@@ -16883,7 +16883,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 952018890}
-  - component: {fileID: 952018891}
   m_Layer: 5
   m_Name: PlayerHealthBar
   m_TagString: Untagged
@@ -16913,20 +16912,6 @@ RectTransform:
   m_AnchoredPosition: {x: 12, y: -24}
   m_SizeDelta: {x: 240, y: 36}
   m_Pivot: {x: 0, y: 0.5}
---- !u!114 &952018891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952018889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43de25c826c88ae48b120018398a78eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Slasher.Ui::Assets.Scripts._Project.Code.Slasher.Ui.Hud.PlayerHealthBar
-  _target: {fileID: 1343902377}
-  _fill: {fileID: 968140371}
 --- !u!1001 &955402996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26900,17 +26885,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220054086}
   m_CullTransparentMesh: 1
---- !u!114 &1343902377 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1545283991668126133, guid: 1e937d83c65e4194cba3c67f4ae10db1, type: 3}
-  m_PrefabInstance: {fileID: 879103000}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ce103f9880c2348bef00cff319207e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Slasher.Game::Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic.UnitCharecteristic
 --- !u!1 &1389966653
 GameObject:
   m_ObjectHideFlags: 0
@@ -28849,6 +28823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponLoadGO: {fileID: 1076086295}
+  _userHealthBarGO: {fileID: 952018889}
 --- !u!1 &2073502687
 GameObject:
   m_ObjectHideFlags: 0
