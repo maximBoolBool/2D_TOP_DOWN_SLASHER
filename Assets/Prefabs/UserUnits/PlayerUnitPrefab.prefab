@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 110228039952637309}
   - component: {fileID: 3395438975470926800}
   - component: {fileID: 1545283991668126133}
+  - component: {fileID: 3351322986954449704}
   m_Layer: 8
   m_Name: PlayerUnitPrefab
   m_TagString: Player
@@ -329,6 +330,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Slasher.Game::Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic.UnitCharecteristic
   speed: 3
   health: 100
+--- !u!114 &3351322986954449704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218730049033437343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975c9cb6a590e2d4c8df0578679002f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Slasher.Game::Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic.PlayerHealthSignalSender
 --- !u!1001 &7657585628444267748
 PrefabInstance:
   m_ObjectHideFlags: 0
