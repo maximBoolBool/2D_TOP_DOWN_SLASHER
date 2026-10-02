@@ -1,8 +1,8 @@
-using Assets.Scripts._Project.Code.Slasher.Game.Bootstraps;
 using Assets.Scripts._Project.Code.Slasher.Game.Constants;
 using Assets.Scripts._Project.Code.Slasher.Game.EventBusMessages;
 using Assets.Scripts._Project.Code.Slasher.Game.PlayerControllers;
 using Assets.Scripts._Project.Code.Slasher.Game.Services;
+using Assets.Scripts._Project.Code.Slasher.Main.Bootstraps;
 using UnityEngine;
 using Zenject;
 

@@ -1,7 +1,7 @@
-using Assets.Scripts._Project.Code.Slasher.Game.Services;
+﻿using Assets.Scripts._Project.Code.Slasher.Game.Services;
 using Zenject;
 
-namespace Assets.Scripts._Project.Code.Slasher.Game.Bootstraps
+namespace Assets.Scripts._Project.Code.Slasher.Main.Bootstraps
 {
     public class GameBootstrap : IInitializable
     {

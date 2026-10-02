@@ -20,7 +20,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
         private const string AmmoQueueName = "AmmoQueue";
         private const string AmmoCounterTextName = "AmmoCounterText";
         private const string ReloadingText = "RELOAD";
-        private const string InfinitySymbol = "∞";
+        private const string InfinitySymbol = "INF";
         private const float IconSize = 16f;
         private const float IconSpacing = 1f;
         private const float IconRotation = 90f;
@@ -117,19 +117,15 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
                 return;
             }
 
-            // визуально показываем не больше MaxVisibleRounds патронов,
-            // точное количество видно в тексте
             int visibleSlots = Mathf.Clamp(_weapon.MagazineRounds, 0, MaxVisibleRounds);
             int visibleLoaded = Mathf.Min(_weapon.AmmoInMagazine, visibleSlots);
             EnsureIconCount(visibleSlots);
 
-            // патрон лежит на боку, поэтому его "толщина" в столбике = ширина спрайта
             float iconWidth = GetIconWidth(_weapon.AmmoIcon);
             float step = visibleSlots > 0
                 ? Mathf.Floor(Mathf.Min(iconWidth + IconSpacing, _ammoQueue.rect.height / visibleSlots))
                 : 0f;
 
-            // снизу вверх: 0-й патрон внизу, отстрелянные темнеют сверху
             for (int i = 0; i < _icons.Count; i++)
             {
                 var icon = _icons[i];
@@ -148,7 +144,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
             }
 
             string reserve = _weapon.IsInfiniteAmmo ? InfinitySymbol : _weapon.AmmoInReserve.ToString();
-            _counterText.text = $"{_weapon.AmmoInMagazine}|{reserve}";
+            _counterText.text = $"{_weapon.AmmoInMagazine}-{reserve}";
         }
 
         // ширина иконки по пропорциям спрайта
