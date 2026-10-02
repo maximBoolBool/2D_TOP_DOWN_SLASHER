@@ -29,8 +29,8 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
 
         public LevelLoadService(
             DiContainer container,
-            [Inject(Id = GameObjectInjectConstants.LEVEL_PREFABS)] List<GameObject> levelPrefabs,
-            [Inject(Id = GameObjectInjectConstants.LEVEL_ROOT)] Transform levelRoot)
+            [Inject(Id = GameObjectInjectConstants.LEVEL_PREFAB_IDS)] List<GameObject> levelPrefabs,
+            [Inject(Id = GameObjectInjectConstants.LEVEL_ROOT_ID)] Transform levelRoot)
         {
             _container = container;
             _levelPrefabs = levelPrefabs;

@@ -16,7 +16,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
 
         public UserHealthBarService(
             [Inject]  SignalBus signalBus,
-            [Inject(Id = GameObjectInjectConstants.USER_HEALTH_BAR_GO)] GameObject healthBarGO
+            [Inject(Id = GameObjectInjectConstants.USER_HEALTH_BAR_GO_ID)] GameObject healthBarGO
         )
         {
             _signalBus = signalBus;

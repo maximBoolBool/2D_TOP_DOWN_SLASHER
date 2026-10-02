@@ -39,7 +39,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
 
         public WeaponUILoadService(
             SignalBus signalBus,
-            [Inject(Id = GameObjectInjectConstants.WEAPON_LOAD_GO)] GameObject weaponLoadGO)
+            [Inject(Id = GameObjectInjectConstants.WEAPON_LOAD_GO_ID)] GameObject weaponLoadGO)
         {
             _signalBus = signalBus;
             _weaponLoadGO = weaponLoadGO;

@@ -16,17 +16,23 @@ namespace Assets.Scripts._Project.Code.Slasher.Main.Installers
         [SerializeField]
         private GameObject _userHealthBarGO;
 
+        [SerializeField]
+        private GameObject _winScreen;
+
+        [SerializeField]
+        private GameObject _defeatScreen;
+
         public override void InstallBindings()
         {
             SignalBusInstaller.Install(Container);
             InjectMessages();
 
             Container.Bind<GameObject>()
-                .WithId(GameObjectInjectConstants.WEAPON_LOAD_GO)
+                .WithId(GameObjectInjectConstants.WEAPON_LOAD_GO_ID)
                 .FromInstance(_weaponLoadGO);
 
             Container.Bind<GameObject>()
-                .WithId(GameObjectInjectConstants.USER_HEALTH_BAR_GO)
+                .WithId(GameObjectInjectConstants.USER_HEALTH_BAR_GO_ID)
                 .FromInstance(_userHealthBarGO);
 
             Container.Bind<IUserHealthBarService>().To<UserHealthBarService>().AsSingle();
