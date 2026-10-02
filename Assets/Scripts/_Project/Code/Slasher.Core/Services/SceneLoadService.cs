@@ -1,4 +1,4 @@
-﻿using Assets.Scripts._Project.Code.Slasher.Core.Constants;
+using Assets.Scripts._Project.Code.Slasher.Core.Constants;
 using Assets.Scripts._Project.Code.Slasher.Core.Enums;
 using Assets.Scripts._Project.Code.Slasher.Core.Models;
 using Assets.Scripts._Project.Code.Slasher.Core.Ui;
@@ -40,6 +40,13 @@ namespace Assets.Scripts._Project.Code.Slasher.Core.Services
             {
                 string previousSceneName = _gameGlobalStateManager.CurrentState.GetSceneName();
                 string newSceneName = newSceneType.GetSceneName();
+
+                // перезапуск той же сцены (например, Restart в игре): сначала выгружаем старую копию,
+                // иначе Additive-загрузка создаст вторую сцену с тем же именем
+                if (previousSceneName == newSceneName)
+                {
+                    await UnloadSceneAsync(previousSceneName);
+                }
 
                 await _zenjectSceneLoader
                     .LoadSceneAsync(newSceneName, LoadSceneMode.Additive)

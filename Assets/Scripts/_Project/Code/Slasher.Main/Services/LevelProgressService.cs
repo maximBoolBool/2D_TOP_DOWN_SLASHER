@@ -73,8 +73,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Main.Services
             LevelView level;
             if (string.IsNullOrEmpty(levelName))
             {
-                // игровую сцену запустили напрямую в редакторе, минуя меню
-                Debug.LogWarning($"{nameof(LevelProgressService)}: level is not selected, loading the first one");
+                // уровень не выбран (Restart или сцену запустили напрямую в редакторе) — начинаем с первого
                 level = _levelLoadService.LoadLevel(0);
             }
             else
