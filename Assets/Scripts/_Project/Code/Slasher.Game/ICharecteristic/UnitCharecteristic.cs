@@ -17,6 +17,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic
         private UnitStatusType _unitStatusType;
 
         public event Action<int, int> HealthChanged;
+        public event Action Died;
 
         public void Awake()
         {
@@ -62,6 +63,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.ICharecteristic
             {
                 UnitAnimationHelper.SetDeadAnimation(animator);
                 SetStatus(UnitStatusType.Dead);
+                Died?.Invoke();
             }
             else
             {

@@ -3344,6 +3344,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponLoadGO: {fileID: 1076086295}
   _userHealthBarGO: {fileID: 952018889}
+  _winScreen: {fileID: 175206396}
+  _defeatScreen: {fileID: 590402222}
 --- !u!1 &2138151934
 GameObject:
   m_ObjectHideFlags: 0

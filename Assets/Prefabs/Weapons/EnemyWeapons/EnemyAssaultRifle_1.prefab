@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 7235693118660796798, guid: cdfc0c56db722484a8ba49f2e43e03be, type: 3}
     - target: {fileID: -4492271545245659672, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: <Damage>k__BackingField
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -4492271545245659672, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: <Distance>k__BackingField

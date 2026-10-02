@@ -38,6 +38,16 @@ namespace Assets.Scripts._Project.Code.Slasher.Main.Installers
             Container.Bind<IUserHealthBarService>().To<UserHealthBarService>().AsSingle();
             Container.Bind<IWeaponUILoadService>().To<WeaponUILoadService>().AsSingle();
 
+            Container.Bind<GameObject>()
+                .WithId(GameObjectInjectConstants.WIN_SCREEN_GO_ID)
+                .FromInstance(_winScreen);
+
+            Container.Bind<GameObject>()
+                .WithId(GameObjectInjectConstants.DEFEAT_SCREEN_GO_ID)
+                .FromInstance(_defeatScreen);
+
+            Container.Bind<IGameUiScreenService>().To<GameUiScreenService>().AsSingle();
+
             BindUserControllers();
 
             Container.BindInterfacesAndSelfTo<GameBootstrap>().AsSingle();
@@ -54,6 +64,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Main.Installers
         {
             Container.DeclareSignal<HealthChangeMessage>();
             Container.DeclareSignal<PlayerWeaponChangedMessage>();
+            Container.DeclareSignal<SetGameUiScreenMessage>();
         }
     }
 }
