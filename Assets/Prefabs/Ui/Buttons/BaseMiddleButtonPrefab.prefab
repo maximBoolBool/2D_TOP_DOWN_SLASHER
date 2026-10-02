@@ -93,8 +93,44 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8316107468865834093, guid: f101b13a96eecb94e8507cdba8539bf9, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316107468865834093, guid: f101b13a96eecb94e8507cdba8539bf9, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2db354314307c7a44ad67f90eea59332, type: 2}
+    - target: {fileID: 8316107468865834093, guid: f101b13a96eecb94e8507cdba8539bf9, type: 3}
       propertyPath: m_fontStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316107468865834093, guid: f101b13a96eecb94e8507cdba8539bf9, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316107468865834093, guid: f101b13a96eecb94e8507cdba8539bf9, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316107468865834093, guid: f101b13a96eecb94e8507cdba8539bf9, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316107468865834093, guid: f101b13a96eecb94e8507cdba8539bf9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316107468865834093, guid: f101b13a96eecb94e8507cdba8539bf9, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4675708862573431474, guid: 2db354314307c7a44ad67f90eea59332, type: 2}
+    - target: {fileID: 8316107468865834093, guid: f101b13a96eecb94e8507cdba8539bf9, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316107468865834093, guid: f101b13a96eecb94e8507cdba8539bf9, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
