@@ -31,7 +31,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
             _buttonLable.SetActive(false);
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerStay2D(Collider2D collision)
         {
             if (!collision.gameObject.CompareTag(TagConstants.PLAYER))
             {

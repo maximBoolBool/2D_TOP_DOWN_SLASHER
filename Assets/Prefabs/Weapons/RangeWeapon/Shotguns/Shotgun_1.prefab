@@ -25,12 +25,20 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -4492271545245659672, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <ReloadTime>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4492271545245659672, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: <BulletsPerShot>k__BackingField
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -4492271545245659672, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: <DeviationAngle>k__BackingField
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -4492271545245659672, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
+      propertyPath: <MagazineRounds>k__BackingField
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -1094383604341937332, guid: f87d6faf880540d46a07f7ec3719ba72, type: 3}
       propertyPath: firePoint

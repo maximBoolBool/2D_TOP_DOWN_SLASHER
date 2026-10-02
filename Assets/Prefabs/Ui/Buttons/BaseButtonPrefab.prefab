@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4667444894119037524}
   - component: {fileID: 1088757962818797670}
   - component: {fileID: 3802275784324359880}
+  - component: {fileID: 8126390696815002898}
   m_Layer: 5
   m_Name: BaseButtonPrefab
   m_TagString: Untagged
@@ -121,6 +122,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8126390696815002898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302846416349447009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d922f39b2ae30346bbaacd63d10322d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Slasher.Ui::Assets.Scripts._Project.Code.Slasher.Ui.MonoBehaviours.AnimatedButton
+  _hoverScale: 1.1
+  _pressedScale: 0.9
+  _scaleDuration: 0.08
 --- !u!1 &6455526635170622049
 GameObject:
   m_ObjectHideFlags: 0

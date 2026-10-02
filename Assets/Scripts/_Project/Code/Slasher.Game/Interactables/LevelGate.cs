@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
 {
@@ -6,6 +6,8 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Interactables
     {
         private Animator _animator;
         private bool _isOpened;
+
+        public bool IsOpened => _isOpened;
 
         private void Awake()
         {

@@ -18,6 +18,12 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Helpers
         {
             var bullets = new List<Bullet>();
 
+            // сцена стрелка уже не активна (идёт переход в меню и она выгружается) — пули не создаём
+            if (SceneManager.GetActiveScene() != firePoint.gameObject.scene)
+            {
+                return bullets;
+            }
+
             for (int i = 0; i < count; i++)
             {
                 var bulletInstance = GameObject.Instantiate(bullet, firePoint.position, firePoint.rotation);

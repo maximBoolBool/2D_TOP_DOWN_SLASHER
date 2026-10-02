@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Assets.Scripts._Project.Code.Slasher.Game.Constants;
+using Assets.Scripts._Project.Code.Slasher.Game.Levels;
 using UnityEngine;
 using Zenject;
 
@@ -9,9 +10,10 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
     {
         int LevelsCount { get; }
         int CurrentLevelIndex { get; }
-        GameObject CurrentLevel { get; }
+        LevelView CurrentLevel { get; }
 
-        GameObject LoadLevel(int levelIndex);
+        LevelView LoadLevel(string levelName);
+        LevelView LoadLevel(int levelIndex);
         void UnloadCurrentLevel();
     }
 
@@ -25,7 +27,7 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
 
         public int LevelsCount => _levelPrefabs.Count;
         public int CurrentLevelIndex { get; private set; } = NoLevelIndex;
-        public GameObject CurrentLevel { get; private set; }
+        public LevelView CurrentLevel { get; private set; }
 
         public LevelLoadService(
             DiContainer container,
@@ -37,7 +39,20 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
             _levelRoot = levelRoot;
         }
 
-        public GameObject LoadLevel(int levelIndex)
+        /// <summary>Загружает уровень по имени префаба (например "Level1").</summary>
+        public LevelView LoadLevel(string levelName)
+        {
+            int index = _levelPrefabs.FindIndex(prefab => prefab != null && prefab.name == levelName);
+            if (index < 0)
+            {
+                Debug.LogError($"{nameof(LevelLoadService)}: level '{levelName}' not found in GameInstaller level prefabs");
+                return null;
+            }
+
+            return LoadLevel(index);
+        }
+
+        public LevelView LoadLevel(int levelIndex)
         {
             if (levelIndex < 0 || levelIndex >= _levelPrefabs.Count)
             {
@@ -54,10 +69,19 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
 
             UnloadCurrentLevel();
 
-            CurrentLevel = _container.InstantiatePrefab(levelPrefab, _levelRoot);
-            CurrentLevel.name = levelPrefab.name;
-            CurrentLevelIndex = levelIndex;
+            // InstantiatePrefab через контейнер — чтобы объекты внутри уровня получили [Inject]
+            var levelObject = _container.InstantiatePrefab(levelPrefab, _levelRoot);
+            levelObject.name = levelPrefab.name;
 
+            CurrentLevel = levelObject.GetComponent<LevelView>();
+            if (CurrentLevel == null)
+            {
+                Debug.LogError($"{nameof(LevelLoadService)}: level prefab '{levelPrefab.name}' has no {nameof(LevelView)} on its root", levelPrefab);
+                // чтобы уровень всё равно корректно выгружался
+                CurrentLevel = levelObject.AddComponent<LevelView>();
+            }
+
+            CurrentLevelIndex = levelIndex;
             return CurrentLevel;
         }
 
@@ -65,8 +89,8 @@ namespace Assets.Scripts._Project.Code.Slasher.Game.Services
         {
             if (CurrentLevel != null)
             {
-                CurrentLevel.SetActive(false);
-                Object.Destroy(CurrentLevel);
+                CurrentLevel.gameObject.SetActive(false);
+                Object.Destroy(CurrentLevel.gameObject);
             }
 
             CurrentLevel = null;

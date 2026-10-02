@@ -2,6 +2,7 @@
     "name": "Slasher.Main",
     "rootNamespace": "",
     "references": [
+        "GUID:e5bfaef864c48b04b86332ef169d720b",
         "Zenject",
         "Slasher.Game",
         "Slasher.Core",
