@@ -1,0 +1,62 @@
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+namespace Assets.Scripts._Project.Code.Slasher.Game.Helpers
+{
+    public static class BulletCreateHelper
+    {
+        public static List<Bullet> InitializeBullets(
+            Bullet bullet,
+            Transform firePoint,
+            int count,
+            float damage,
+            float distance,
+            float deviationAngle
+        )
+        {
+            var bullets = new List<Bullet>();
+
+            // сцена стрелка уже не активна (идёт переход в меню и она выгружается) — пули не создаём
+            if (SceneManager.GetActiveScene() != firePoint.gameObject.scene)
+            {
+                return bullets;
+            }
+
+            for (int i = 0; i < count; i++)
+            {
+                var bulletInstance = GameObject.Instantiate(bullet, firePoint.position, firePoint.rotation);
+                SceneManager.MoveGameObjectToScene(bulletInstance.gameObject, firePoint.gameObject.scene);
+                bullets.Add(bulletInstance);
+            }
+
+            var bulletsFireDirections = new Dictionary<int, Vector2>();
+
+            int[] sectorIndices = Enumerable.Range(0, bullets.Count).OrderBy(x => UnityEngine.Random.value).ToArray();
+
+            for (int i = 0; i < bullets.Count; i++)
+            {
+                Vector2 fireDirection = firePoint.right;
+
+                float sectorSize = deviationAngle / bullets.Count;
+                int sector = sectorIndices[i];
+                float sectorStart = -deviationAngle / 2f + sector * sectorSize;
+                float sectorEnd = sectorStart + sectorSize;
+
+                float randomOffset = UnityEngine.Random.Range(sectorStart, sectorEnd);
+
+                fireDirection = Quaternion.Euler(0f, 0f, randomOffset) * fireDirection;
+                bulletsFireDirections.Add(i, fireDirection);
+            }
+
+            for (int i = 0; i < bullets.Count; i++)
+            {
+                Vector2 fireDirection = bulletsFireDirections[i];
+                bullets[i].Initialize(damage, distance, fireDirection);
+            }
+
+            return bullets;
+        }
+    }
+}
